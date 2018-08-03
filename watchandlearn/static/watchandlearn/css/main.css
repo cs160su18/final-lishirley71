@@ -1,0 +1,21 @@
+.sidenav {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: gray;
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.sidenav a {
+    padding: 5px;
+    font-size: 30px;
+    color: white;
+    display: block;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidebar */
+}
