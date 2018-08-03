@@ -23,7 +23,7 @@ def index(request):
 def assessment(request):
     return render(
         request,
-        'watchandlearn/assessment-final.html',
+        'watchandlearn/assessment.html',
         context={},
     ) 
 
