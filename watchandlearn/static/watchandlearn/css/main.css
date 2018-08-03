@@ -104,8 +104,16 @@ html, body{
 }
 
 .ep{
-    width: 20em;
-    height: 465px;
     background-color: darkgray;
     text-align: center;
+    margin-bottom: 5em;
+    color: white;
+   
+}
+
+.area{
+     width: 20em;
+    height: 465px;
+    display: table-cell;
+    vertical-align: middle;
 }
