@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="assessment-final.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<title> Self Assessment </title>
+		<h1> Self Assessment </h1>
+		<div class="slidecontainer">
+			<p>Vocabulary: <span id="vocabText"></span></p>
+	  		<input type="range" min="1" max="100" value="50" class="slider" id="vocabulary">
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="slidecontainer">
+			<p>Reading: <span id="readingText"></span></p>
+	  		<input type="range" min="1" max="100" value="50" class="slider" id="reading">
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="slidecontainer">
+			<p>Writing: <span id="writingText"></span></p>
+	  		<input type="range" min="1" max="100" value="50" class="slider" id="writing">
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="slidecontainer">
+			<p>Grammar: <span id="grammarText"></span></p>
+	  		<input type="range" min="1" max="100" value="50" class="slider" id="grammar">
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<fieldset>
+		    <legend>Interested Topics</legend>
+
+		    <div>
+		        <input type="checkbox" id="action" name="feature"
+		               value="action" checked />
+		        <label for="action">Action</label>
+		    </div>
+
+		    <div>
+		        <input type="checkbox" id="adventure" name="feature"
+		               value="adventure" />
+		        <label for="adventure">Adventure</label>
+		    </div>
+
+		    <div>
+		        <input type="checkbox" id="romance" name="feature"
+		               value="romance" />
+		        <label for="romance">Romance</label>
+		    </div>
+
+		    <div>
+		      <button type="submit">Submit</button>
+		    </div>
+		</fieldset>
+	</body>
+	<script type="text/javascript"> 
+
+		var score = 0;
+
+		var vocabScore = 0;
+		var readingScore = 0;
+		var writingScore = 0;
+		var grammarScore = 0;
+
+
+		var vocabSlider = document.getElementById("vocabulary");
+		var vocabOutput = document.getElementById("vocabText");
+		vocabOutput.innerHTML = vocabSlider.value;
+
+		vocabSlider.oninput = function() {
+		  vocabScore = this.value;
+		  vocabOutput.innerHTML = vocabScore;
+		  score = score + vocabScore;
+		}
+		var readingSlider = document.getElementById("reading");
+		var readingOutput = document.getElementById("readingText");
+		readingOutput.innerHTML = readingSlider.value;
+
+		readingSlider.oninput = function() {
+		  readingScore = this.value;
+		  readingOutput.innerHTML = readingScore;
+		  score = score + readingScore;
+		}
+		var writingSlider = document.getElementById("writing");
+		var writingOutput = document.getElementById("writingText");
+		writingOutput.innerHTML = writingSlider.value;
+
+		writingSlider.oninput = function() {
+		  writingScore = this.value;
+		  writingOutput.innerHTML = writingScore;
+		  score = score + writingScore;
+		}
+		var grammarSlider = document.getElementById("grammar");
+		var grammarOutput = document.getElementById("grammarText");
+		grammarOutput.innerHTML = grammarSlider.value;
+
+		grammarSlider.oninput = function() {
+		  grammarScore = this.value;
+		  grammarOutput.innerHTML = grammarScore;
+		  score = score + grammarScore;
+		}
+
+	</script>
+
+</html>
