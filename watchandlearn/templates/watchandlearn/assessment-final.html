@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="assessment-final.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	</head>
-	<body>
-		<title> Self Assessment </title>
-		<h1> Self Assessment </h1>
+{% extends "watchandlearn/base_generic.html" %}
+
+{% block content %}
+<h1> Self Assessment </h1>
 		<div class="slidecontainer">
 			<p>Vocabulary: <span id="vocabText"></span></p>
 	  		<input type="range" min="1" max="100" value="50" class="slider" id="vocabulary">
@@ -105,54 +100,62 @@
 		      <button type="submit">Submit</button>
 		    </div>
 		</fieldset>
-	</body>
-	<script type="text/javascript"> 
 
-		var score = 0;
-
-		var vocabScore = 0;
-		var readingScore = 0;
-		var writingScore = 0;
-		var grammarScore = 0;
+{% endblock %}
 
 
-		var vocabSlider = document.getElementById("vocabulary");
-		var vocabOutput = document.getElementById("vocabText");
-		vocabOutput.innerHTML = vocabSlider.value;
 
-		vocabSlider.oninput = function() {
-		  vocabScore = this.value;
-		  vocabOutput.innerHTML = vocabScore;
-		  score = score + vocabScore;
-		}
-		var readingSlider = document.getElementById("reading");
-		var readingOutput = document.getElementById("readingText");
-		readingOutput.innerHTML = readingSlider.value;
 
-		readingSlider.oninput = function() {
-		  readingScore = this.value;
-		  readingOutput.innerHTML = readingScore;
-		  score = score + readingScore;
-		}
-		var writingSlider = document.getElementById("writing");
-		var writingOutput = document.getElementById("writingText");
-		writingOutput.innerHTML = writingSlider.value;
 
-		writingSlider.oninput = function() {
-		  writingScore = this.value;
-		  writingOutput.innerHTML = writingScore;
-		  score = score + writingScore;
-		}
-		var grammarSlider = document.getElementById("grammar");
-		var grammarOutput = document.getElementById("grammarText");
-		grammarOutput.innerHTML = grammarSlider.value;
 
-		grammarSlider.oninput = function() {
-		  grammarScore = this.value;
-		  grammarOutput.innerHTML = grammarScore;
-		  score = score + grammarScore;
-		}
 
-	</script>
 
-</html>
+
+<script type="text/javascript"> 
+
+	var score = 0;
+
+	var vocabScore = 0;
+	var readingScore = 0;
+	var writingScore = 0;
+	var grammarScore = 0;
+
+
+	var vocabSlider = document.getElementById("vocabulary");
+	var vocabOutput = document.getElementById("vocabText");
+	vocabOutput.innerHTML = vocabSlider.value;
+
+	vocabSlider.oninput = function() {
+	  vocabScore = this.value;
+	  vocabOutput.innerHTML = vocabScore;
+	  score = score + vocabScore;
+	}
+	var readingSlider = document.getElementById("reading");
+	var readingOutput = document.getElementById("readingText");
+	readingOutput.innerHTML = readingSlider.value;
+
+	readingSlider.oninput = function() {
+	  readingScore = this.value;
+	  readingOutput.innerHTML = readingScore;
+	  score = score + readingScore;
+	}
+	var writingSlider = document.getElementById("writing");
+	var writingOutput = document.getElementById("writingText");
+	writingOutput.innerHTML = writingSlider.value;
+
+	writingSlider.oninput = function() {
+	  writingScore = this.value;
+	  writingOutput.innerHTML = writingScore;
+	  score = score + writingScore;
+	}
+	var grammarSlider = document.getElementById("grammar");
+	var grammarOutput = document.getElementById("grammarText");
+	grammarOutput.innerHTML = grammarSlider.value;
+
+	grammarSlider.oninput = function() {
+	  grammarScore = this.value;
+	  grammarOutput.innerHTML = grammarScore;
+	  score = score + grammarScore;
+	}
+
+</script>

@@ -20,3 +20,9 @@ def index(request):
     ) 
 
 # @login_required
+def assessment(request):
+    return render(
+        request,
+        'watchandlearn/assessment-final.html',
+        context={},
+    ) 
