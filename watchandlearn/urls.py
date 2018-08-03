@@ -8,5 +8,8 @@ urlpatterns = [
     path('episodes/', views.episodes, name='episodes'),
     path('quiz/', views.quiz, name='quiz'),
     path('vocab/', views.vocab, name='vocab'),
+    path('lvlup/', views.lvlup, name='lvlup'),
+    path('feedback/', views.feedback, name='feedback'),
+    
 
 ]

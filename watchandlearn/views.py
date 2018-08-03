@@ -42,7 +42,7 @@ def episodes(request):
 				'watchandlearn/episodes.html',
 				context={},
 			)
-	
+
 # @login_required
 def quiz(request):
 	return render(
@@ -56,5 +56,21 @@ def vocab(request):
 	return render(
 				request,
 				'watchandlearn/vocab.html',
+				context={},
+			)
+
+# @login_required
+def lvlup(request):
+	return render(
+				request,
+				'watchandlearn/lvlup.html',
+				context={},
+			)
+
+# @login_required
+def feedback(request):
+	return render(
+				request,
+				'watchandlearn/feedback.html',
 				context={},
 			)
