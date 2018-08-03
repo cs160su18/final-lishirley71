@@ -10,13 +10,17 @@ class Profile(models.Model):
 	reading = models.IntegerField(default=0)
 	writing = models.IntegerField(default=0)
 	grammar = models.IntegerField(default=0)
-	score = models.IntegerField(default=0)
+	composite = models.IntegerField(default=0)
 	level = models.IntegerField(default=1)
 	experience = models.IntegerField(default=0)
 	
 	def __str__(self):
 		return self.user.username
 
+class Word(models.Model):
+	name = models.CharField(max_length=100)
+	difficulty = models.IntegerField(default=0)
+	definition = models.CharField(default='defn', max_length=300)
 
 class Topic(models.Model):
 	title = models.CharField(max_length=100)
