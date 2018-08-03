@@ -26,3 +26,35 @@ def assessment(request):
         'watchandlearn/assessment-final.html',
         context={},
     ) 
+
+# @login_required
+def recommended(request):
+	return render(
+				request,
+				'watchandlearn/recommended.html',
+				context={},
+			)
+
+# @login_required
+def episodes(request):
+	return render(
+				request,
+				'watchandlearn/episodes.html',
+				context={},
+			)
+	
+# @login_required
+def quiz(request):
+	return render(
+				request,
+				'watchandlearn/quiz.html',
+				context={},
+			)
+
+# @login_required
+def vocab(request):
+	return render(
+				request,
+				'watchandlearn/vocab.html',
+				context={},
+			)
