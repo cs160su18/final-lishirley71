@@ -1,42 +1,143 @@
-{% extends "watchandlearn/base_generic.html" %}
+<!DOCTYPE html>
+<html>
+  <head>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-{% block content %}
 
-<!-- Pre-Episode Vocab Screen -->
+     <style type="text/css">
+     body, html {
+       margin: 0;
+       overflow: hidden;
+       height:100vh;
+     }
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <!-- django-->
-      <h1 id="animeTitle"> Anime Title </h1>
-      <h2 id="animeSeason"> Anime Season </h2>
-      <h3 id="animeEpisode"> Anime Episode </h3>
-      <div id="preview">
-        <p> Preview </p>
+     .row1col1, .row1col2 {
+       overflow: scroll;
+       height: 90vh;
+     }
+
+     .row2col1, .row2col2 {
+       height: 10vh;
+     }
+
+     .c1 {
+       height: 90%;
+     }
+
+     .c2 {
+       height: 10%;
+       position: absolute;
+       bottom:0;
+     }
+
+     #preview {
+       height: 50vh;
+       min-width: 30vw;
+       margin: auto;
+       margin-top: 4%;
+       margin-bottom: 4%;
+       background-color: grey;
+     }
+     </style>
+
+  </head>
+  <body>
+
+    <div class="container-fluid c1">
+      <div class="row">
+        <div class="col-sm-6 row1col1">
+          <!-- django -->
+          <h1 id="animeTitle"> Anime Title </h1>
+          <h2 id="animeSeason"> Anime Season </h2>
+          <h3 id="animeEpisode"> Anime Episode </h3>
+          <div id="preview">
+            <p> Preview </p>
+          </div>
+        </div>
+        <div class="col-sm-6 row1col2">
+          <h2 id="KeyTerms">Key Terms</h2>
+
+          <!-- django -->
+          <ul id="termList">
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+            <li>Term</li>
+          </ul>
+
+        </div>
       </div>
     </div>
-    <div class="col-sm-6">
-      <h2 id="KeyTerms">Key Terms</h2>
 
-      <!-- django-->
-      <ul id="termList">
-        <li>Term 1</li>
-      </ul>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6">
-      <div id="popUpBtn">
+    <div class="container-fluid c2">
+      <div class="row">
+        <div class="col-sm-6 row2col1">
+          <div id="popUpBtn">
+            <button id="pop" type="button" onclick="popUpToggle()">Popup On</button>
+          </div>
+        </div>
+        <div class="col-sm-6 row2col2">
+          <div id="goBtn" class="float-right">
+            <button type="button" onclick="window.location.href='episode-view.html'"> Go! </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-sm-6">
-      <div id="goBtn">
-      </div>
-    </div>
-  </div>
+  <script>
+  function popUpToggle () {
+    var x = document.getElementById("pop");
+    if (x.innerText === "Popup On") {
+      x.innerText = "Popup Off";
+    } else {
+      x.innerText = "Popup On";
+    }
+  }
 
-</div>
-
-{% endblock %}
+  </script>
+  </body>
+</html>
