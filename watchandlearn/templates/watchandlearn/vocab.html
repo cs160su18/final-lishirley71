@@ -2,7 +2,41 @@
 
 {% block content %}
 
+<!-- Pre-Episode Vocab Screen -->
 
-Your HTML Here
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <!-- django-->
+      <h1 id="animeTitle"> Anime Title </h1>
+      <h2 id="animeSeason"> Anime Season </h2>
+      <h3 id="animeEpisode"> Anime Episode </h3>
+      <div id="preview">
+        <p> Preview </p>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <h2 id="KeyTerms">Key Terms</h2>
+
+      <!-- django-->
+      <ul id="termList">
+        <li>Term 1</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="popUpBtn">
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div id="goBtn">
+      </div>
+    </div>
+  </div>
+
+</div>
 
 {% endblock %}
