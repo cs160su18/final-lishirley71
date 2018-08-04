@@ -20,7 +20,6 @@ class Profile(models.Model):
 class Word(models.Model):
 	name = models.CharField(max_length=100)
 	difficulty = models.IntegerField(default=0)
-	definition = models.CharField(default='defn', max_length=300)
 
 class Topic(models.Model):
 	title = models.CharField(max_length=100)

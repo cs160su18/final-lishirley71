@@ -53,6 +53,7 @@ def quiz(request):
 
 # @login_required
 def vocab(request):
+
 	return render(
 				request,
 				'watchandlearn/vocab.html',

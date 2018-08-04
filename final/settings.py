@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'watchandlearn.apps.WatchandlearnConfig'
+    'watchandlearn.apps.WatchandlearnConfig',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,5 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
 
 STATICFILES_DIRS = ('/watchandlearn/static/',)
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
