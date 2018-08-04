@@ -7,7 +7,7 @@ urlpatterns = [
     path('recommended/', views.recommended, name='recommended'),
     path('episodes/', views.episodes, name='episodes'),
     path('quiz/', views.quiz, name='quiz'),
-    path('vocab/', views.vocab, name='vocab'),
+    path('episode/<int:pk>/vocab/', views.EpisodeDetailView.as_view(), name='episode-detail'),
     path('lvlup/', views.lvlup, name='lvlup'),
     path('feedback/', views.feedback, name='feedback'),
     

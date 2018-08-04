@@ -10,7 +10,10 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 from .forms import *
 from watchandlearn.models import *
+from my_secrets import secrets
+import re, requests, json, urllib
 
+HIGHEST_SCORE = 6
 
 def index(request):
     return render(
@@ -52,14 +55,126 @@ def quiz(request):
 			)
 
 # @login_required
-def vocab(request):
+class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
+  model = Episode
 
-	return render(
-				request,
-				'watchandlearn/vocab.html',
-				context={},
-			)
+  # HELPER METHODS
 
+  # inclusive range function
+  def irange(self, x, y):
+    return range(x, y+1)
+
+  # turns the content of an srt file into a list of unique words
+  def strip_captions(self, caption):
+    # remove non-word characters (except for ' )
+    caption = re.sub('[\d:,->!"?^]', ' ', caption)
+
+    # remove new lines
+    caption = caption.replace('\n', ' ')
+
+    # remove tabs
+    caption = caption.replace('\t', ' ')
+
+    caption = caption.replace('\r', ' ')
+
+    # remove extra spaces
+    caption = re.sub(' +',' ', caption)
+
+    # to lower case
+    caption = caption.lower()
+
+    # split into a set of unique words, delimited by spaces
+    return set(caption.split(" "))
+  
+  # find timestamp where search_term was said
+  def find_timestamp(self, arr, search_term):
+    line = 1
+    captions = {}
+    chunk = []
+    timestamp = ''
+    i = 0
+
+    while i < len(arr):
+      item = arr[i]
+      # if it gets to the next line
+      if item == str(line):
+        i+=1
+        timestamp = arr[i]
+      elif item == '':
+        word = " ". join(chunk)
+        captions[timestamp] = word
+        chunk = []
+        timestamp = ''
+        line += 1
+      else:
+        chunk.append(item)
+      i += 1
+    word = " ". join(chunk)
+    captions[timestamp] = word
+
+    # reverse dict
+    captions = {y:x for x,y in captions.items()}
+
+    for line, timestamp in captions.items():
+      if search_term in line:
+        return timestamp
+    return 'Not Found'
+
+  # use WordAPI to find definitions for search_term
+  def find_definition(self, search_term):
+    app_id = secrets.OXFORD_ID
+    app_key = secrets.OXFORD_KEY
+
+    language = 'en'
+    search_term = search_term.replace(" ", "_")
+    word_id = urllib.parse.quote_plus(search_term)
+
+    url = 'https://od-api.oxforddictionaries.com:443/api/v1/entries/' + language + '/' + word_id.lower()
+
+    r = requests.get(url, headers = {'app_id': app_id, 'app_key': app_key}).json()
+    defn = r['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['definitions'][0]
+    return defn
+
+  def get_context_data(self, **kwargs):
+    
+    # context is a dict of info available in the view
+    context = super(EpisodeDetailView, self).get_context_data(**kwargs)
+    
+    # list of vocab to eventually put into the context dict
+    vocab_list = []
+    
+    # selected episode 
+    episode = context['episode']
+    
+    # compare words to user's vocab score
+    u = self.request.user.profile
+    vocab = u.vocabulary
+    
+    # create list of unique words
+    script_list = self.strip_captions(episode.subtitle)
+    for diff_lvl in reversed(self.irange(vocab, HIGHEST_SCORE)):
+      if len(vocab_list) >= 5:
+        break
+      word_list = Word.objects.filter(difficulty__gte=diff_lvl)
+      for word_obj in word_list:
+        # word_list is a list of word objects, but we just want the word itself
+        word = word_obj.name
+        if(len(word) < 5):
+          continue
+        if word in script_list:
+          vocab_list.append(word)
+          if len(vocab_list) >= 5:
+            break
+
+    terms = []
+    arr = episode.subtitle.splitlines()
+    for search_term in vocab_list:
+      timestamp = self.find_timestamp(arr, search_term)
+      definition = self.find_definition(search_term)
+      terms.append({'timestamp': timestamp, 'word': search_term.capitalize(), 'definition': definition})
+    context['terms'] = terms
+    return context
+    
 # @login_required
 def lvlup(request):
 	return render(
@@ -75,3 +190,5 @@ def feedback(request):
 				'watchandlearn/feedback.html',
 				context={},
 			)
+
+

@@ -20,7 +20,9 @@
 
       <!-- django-->
       <ul id="termList">
-        <li>Term 1</li>
+        {% for term in terms %}
+          <li>({{ term.timestamp }}) {{ term.word }}: {{ term.definition }}</li>
+        {% endfor %}
       </ul>
 
     </div>
