@@ -54,6 +54,13 @@ def quiz(request):
 				context={},
 			)
 
+def episode_watch(request, pk):
+
+    episode = get_object_or_404(Episode, pk=pk)
+    
+    return render(request, 'watchandlearn/episode_watch.html', context={'episode': episode})
+
+
 # @login_required
 class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
   model = Episode
