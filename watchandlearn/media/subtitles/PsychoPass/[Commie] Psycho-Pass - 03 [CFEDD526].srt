@@ -1,0 +1,1328 @@
+﻿1
+00:00:00,000 --> 00:00:00,033
+Edited at https://subtitletools.com
+
+2
+00:01:02,790 --> 00:01:07,480
+My head is full of things
+
+3
+00:01:08,330 --> 00:01:12,640
+that I can never tell anybody of
+
+4
+00:01:13,750 --> 00:01:18,200
+In this perfect world
+
+5
+00:01:19,520 --> 00:01:22,130
+I roam, a lost being
+
+6
+00:01:30,300 --> 00:01:33,050
+The impossible is holding sway over me
+
+7
+00:01:33,050 --> 00:01:37,010
+All I know of the world is what I can see
+
+8
+00:01:37,010 --> 00:01:39,080
+Is that enough to find its faults?
+
+9
+00:01:39,610 --> 00:01:41,210
+Artificial, artificial
+
+10
+00:01:41,210 --> 00:01:44,380
+Hey, how can they stay so sane?
+
+11
+00:01:44,380 --> 00:01:47,420
+This is their artificial world
+
+12
+00:01:47,420 --> 00:01:50,220
+In this beautiful world
+
+13
+00:01:50,220 --> 00:01:53,570
+there is something
+
+14
+00:01:54,340 --> 00:01:57,040
+that obscures all light for me
+
+15
+00:01:57,860 --> 00:02:01,430
+My heart tries to make sense of it
+
+16
+00:02:01,430 --> 00:02:03,810
+and finds no answer
+
+17
+00:02:03,410 --> 00:02:05,930
+Secret kills for you
+
+18
+00:02:05,930 --> 00:02:08,650
+Secret kills for you
+
+19
+00:02:08,390 --> 00:02:13,200
+Secret image for you
+
+20
+00:02:14,420 --> 00:02:17,590
+Don't show me a dark future
+
+21
+00:02:19,260 --> 00:02:23,910
+with this gaudy land
+
+22
+00:02:25,020 --> 00:02:28,550
+Show me a way to fade
+
+23
+00:02:34,360 --> 00:02:37,370
+The victim is Shioyama Daisuke, twenty-seven years old.
+
+24
+00:02:37,370 --> 00:02:39,700
+He worked at the Hachiouji Drone Factory.
+
+25
+00:02:39,700 --> 00:02:42,050
+His body was found at precisely 4 AM.
+
+26
+00:02:42,890 --> 00:02:46,020
+They said he was dismembered by a Drone he was testing.
+
+27
+00:02:46,910 --> 00:02:49,190
+Do you think... it was an accident?
+
+28
+00:02:49,190 --> 00:02:54,460
+I heard that this is already the third casualty in the past year at this factory.
+
+29
+00:02:55,040 --> 00:02:56,980
+It's clearly unusual.
+
+30
+00:02:57,700 --> 00:03:00,320
+The body was found in the Drones' behavior inspection section,
+
+31
+00:03:00,320 --> 00:03:04,990
+the only manned area in the otherwise automated production line.
+
+32
+00:03:05,540 --> 00:03:09,160
+There are about fifty debuggers working there around the clock.
+
+33
+00:03:09,770 --> 00:03:11,960
+Is that a live-in job?
+
+34
+00:03:12,330 --> 00:03:14,380
+There are over 1000 Drones
+
+35
+00:03:14,380 --> 00:03:17,860
+that need to be evaluated and verified each month.
+
+36
+00:03:17,860 --> 00:03:20,170
+They have no choice but to work around the clock.
+
+37
+00:03:20,600 --> 00:03:24,340
+If you can install a program that induces a malfunction in a Drone before it's tested,
+
+38
+00:03:24,920 --> 00:03:28,270
+there's a good chance you can make it look like an accident.
+
+39
+00:03:28,270 --> 00:03:30,020
+Which means...
+
+40
+00:03:30,020 --> 00:03:31,860
+This could be a murder case.
+
+41
+00:03:33,430 --> 00:03:36,480
+But if there are only fifty suspects,
+
+42
+00:03:36,480 --> 00:03:39,310
+can't we just check everyone's Crime Coefficient?
+
+43
+00:03:40,100 --> 00:03:42,980
+Well, it's not that simple.
+
+44
+00:03:43,240 --> 00:03:47,080
+#03: Rearing Conventions
+
+45
+00:03:57,020 --> 00:03:58,490
+Inspector Ginoza...
+
+46
+00:03:58,490 --> 00:03:59,300
+What is it?
+
+47
+00:03:59,300 --> 00:04:03,630
+I feel like I'll be able to get along well with the Enforcers.
+
+48
+00:04:05,200 --> 00:04:08,900
+Do you mean you'll get along with them as a colleague?
+
+49
+00:04:08,900 --> 00:04:13,040
+Or as their handler?
+
+50
+00:04:14,560 --> 00:04:16,920
+They say that fools learn from their experiences,
+
+51
+00:04:16,920 --> 00:04:18,720
+while the wise learn from history.
+
+52
+00:04:19,780 --> 00:04:21,780
+I hope you're not a fool.
+
+53
+00:04:24,880 --> 00:04:26,560
+Welcome, detectives.
+
+54
+00:04:30,080 --> 00:04:31,910
+I'd like to see where it happened.
+
+55
+00:04:31,910 --> 00:04:34,330
+Of course. This way, please.
+
+56
+00:04:39,020 --> 00:04:43,790
+We do a safety check and a test run here after the Drones are built.
+
+57
+00:04:43,790 --> 00:04:46,650
+We depend on machines for all the other processes,
+
+58
+00:04:46,650 --> 00:04:50,740
+but the final check still needs to be done by humans, as it's always been.
+
+59
+00:04:50,740 --> 00:04:53,160
+As you can see, it's dangerous work.
+
+60
+00:04:53,160 --> 00:04:56,770
+It's hard on the debuggers, isn't it?
+
+61
+00:04:57,160 --> 00:04:58,360
+Yes, it is.
+
+62
+00:04:59,110 --> 00:05:03,010
+In fact, there aren't many ways to deal with stress here, unlike in the outside world.
+
+63
+00:05:03,010 --> 00:05:07,500
+You can't connect to the net, so there's not much in the way of diversions.
+
+64
+00:05:07,500 --> 00:05:09,950
+Is this place offline?
+
+65
+00:05:10,380 --> 00:05:13,400
+We're not wired for it,
+
+66
+00:05:13,400 --> 00:05:16,890
+and this building itself is an anechoic chamber,
+
+67
+00:05:16,890 --> 00:05:20,920
+so there's no way to access outside communications networks here.
+
+68
+00:05:21,380 --> 00:05:25,470
+This is the most efficient security system against hacking.
+
+69
+00:05:28,860 --> 00:05:30,740
+How horrifying.
+
+70
+00:05:30,740 --> 00:05:32,810
+A totally isolated area, huh?
+
+71
+00:05:36,820 --> 00:05:40,680
+The body was already taken away by a Drone during the initial response.
+
+72
+00:05:41,440 --> 00:05:43,480
+However, I'm told it was all recorded on this disk.
+
+73
+00:05:51,400 --> 00:05:55,100
+It's like his body was dissected by the Drone while he was still alive.
+
+74
+00:05:55,100 --> 00:05:56,210
+Nasty.
+
+75
+00:05:56,210 --> 00:06:04,420
+Blood Type
+
+76
+00:05:56,210 --> 00:06:00,510
+Did the victim, Mr. Shioyama, have anyone with a grudge against him?
+
+77
+00:05:56,210 --> 00:06:04,420
+Shioyama Daisuke
+
+78
+00:05:56,210 --> 00:06:04,420
+Height:                            Weight:
+
+79
+00:05:56,210 --> 00:06:04,420
+Hue:
+
+80
+00:06:00,510 --> 00:06:01,850
+No, he didn't.
+
+81
+00:06:01,850 --> 00:06:03,650
+He was a model employee.
+
+82
+00:06:03,650 --> 00:06:06,360
+His Psycho-Pass showed no indication of any problems.
+
+83
+00:06:06,960 --> 00:06:08,640
+It must have been an accident.
+
+84
+00:06:09,370 --> 00:06:14,440
+But this is the third incident of this kind. Don't you think that's a few too many?
+
+85
+00:06:14,440 --> 00:06:18,890
+As I told you earlier, this is a dangerous work environment.
+
+86
+00:06:19,350 --> 00:06:22,940
+If you have any criticisms regarding our management, we're all ears,
+
+87
+00:06:22,940 --> 00:06:26,820
+but please air those concerns through the appropriate channels.
+
+88
+00:06:28,270 --> 00:06:31,100
+What about the Drone that went out of control?
+
+89
+00:06:31,100 --> 00:06:33,390
+I'm having it sent to headquarters.
+
+90
+00:06:33,390 --> 00:06:35,770
+We'll have to wait for Karanomori to complete her analysis,
+
+91
+00:06:36,300 --> 00:06:38,570
+but I was told that its memory, including the backup, is gone.
+
+92
+00:06:39,260 --> 00:06:41,290
+We probably shouldn't expect much.
+
+93
+00:06:44,960 --> 00:06:48,310
+For now, head back to the car and forward this to headquarters.
+
+94
+00:06:48,930 --> 00:06:51,070
+I have a few more things to talk about with Chief Goda.
+
+95
+00:06:52,810 --> 00:06:53,800
+Okay.
+
+96
+00:06:58,710 --> 00:07:02,940
+These are the Psycho-Passes for all staff within this facility.
+
+97
+00:07:02,940 --> 00:07:05,340
+These records contain the results of our detailed periodic checks
+
+98
+00:07:05,340 --> 00:07:08,840
+along with the Hue Assessments by the scanners installed in the building.
+
+99
+00:07:08,840 --> 00:07:10,030
+Thank you.
+
+100
+00:07:12,180 --> 00:07:15,190
+As you can see for yourself,
+
+101
+00:07:15,190 --> 00:07:19,290
+there are no staff members who continuously exceeded the regulation value.
+
+102
+00:07:20,380 --> 00:07:24,410
+Even if you suspect murder, there's no suspect to be found.
+
+103
+00:07:24,410 --> 00:07:29,130
+We won't know that until we analyze this data using the Sibyl System.
+
+104
+00:07:29,130 --> 00:07:31,540
+That will take some time.
+
+105
+00:07:31,540 --> 00:07:34,800
+But there's an easier way to check.
+
+106
+00:07:35,170 --> 00:07:36,810
+Oh? Like what?
+
+107
+00:07:37,300 --> 00:07:38,770
+We can use our Dominators.
+
+108
+00:07:39,420 --> 00:07:42,650
+Please have all the staff come outside the anechoic chamber
+
+109
+00:07:43,120 --> 00:07:45,610
+and let us check them using our devices.
+
+110
+00:07:45,610 --> 00:07:48,940
+But that'll disrupt our operations.
+
+111
+00:07:49,310 --> 00:07:51,570
+People's lives are at stake here.
+
+112
+00:07:54,460 --> 00:07:59,750
+If you can provide evidence that Shioyama's death was a murder,
+
+113
+00:07:59,750 --> 00:08:02,130
+we will certainly cooperate with you.
+
+114
+00:08:02,670 --> 00:08:06,120
+But as things stand, we have no choice but to consider this an accident.
+
+115
+00:08:06,120 --> 00:08:10,900
+If you want to investigate our staff even to the point of disrupting production,
+
+116
+00:08:10,900 --> 00:08:15,890
+please file a request with the Ministry of Economy first.
+
+117
+00:08:24,570 --> 00:08:29,690
+I bet Nobuchika's trying to put some pressure on that chief right now.
+
+118
+00:08:29,690 --> 00:08:31,350
+What a pain.
+
+119
+00:08:31,830 --> 00:08:33,200
+What do you mean?
+
+120
+00:08:34,020 --> 00:08:36,090
+You saw the documents too, right?
+
+121
+00:08:36,090 --> 00:08:39,590
+This is a government facility under the jurisdiction of the Ministry of Economy.
+
+122
+00:08:40,190 --> 00:08:43,650
+And government offices always look out for their own bottom lines.
+
+123
+00:08:43,650 --> 00:08:48,980
+So they don't want anyone interfering enough to cause a drop in productivity.
+
+124
+00:08:48,980 --> 00:08:51,550
+Even though someone lost their life?
+
+125
+00:08:51,550 --> 00:08:56,660
+That's exactly why they want it to be declared an accident as soon as possible.
+
+126
+00:08:56,660 --> 00:09:01,670
+But their scanner hasn't actually detected anyone dangerous, right?
+
+127
+00:09:02,390 --> 00:09:04,690
+Well, who knows?
+
+128
+00:09:05,220 --> 00:09:12,070
+The best these scanners can do is measure a person's stress patterns by performing a Hue Assessment.
+
+129
+00:09:12,070 --> 00:09:16,210
+If you want to actually compute a person's mental state based on the cymatic scan data
+
+130
+00:09:16,210 --> 00:09:19,880
+in order to check their job aptitude and Crime Coefficient,
+
+131
+00:09:19,880 --> 00:09:23,080
+you need to wait in line for an analysis by the Sibyl System.
+
+132
+00:09:23,390 --> 00:09:32,440
+However, our Dominators are able to cut in line,
+so to speak, and request an analysis immediately.
+
+133
+00:09:32,440 --> 00:09:34,800
+That's why they can see right through someone's mind
+
+134
+00:09:34,800 --> 00:09:38,580
+with no time lag as soon as you point the gun at them.
+
+135
+00:09:38,580 --> 00:09:39,640
+But...
+
+136
+00:09:44,340 --> 00:09:45,890
+Hold it in your hand.
+
+137
+00:09:49,990 --> 00:09:53,590
+User authentication: Inspector Tsunemori Akane.
+
+138
+00:09:54,100 --> 00:09:55,760
+Dominator usage approval confirmed.
+
+139
+00:09:57,390 --> 00:09:58,570
+Communication error.
+
+140
+00:09:58,570 --> 00:10:01,450
+System link cannot be established.
+
+141
+00:10:03,270 --> 00:10:06,170
+Since this facility blocks all electromagnetic radiation,
+
+142
+00:10:06,170 --> 00:10:10,000
+we won't be able to connect to the Sibyl System while inside.
+
+143
+00:10:10,360 --> 00:10:13,530
+And without that, your Dominator's basically just scrap iron.
+
+144
+00:10:13,530 --> 00:10:15,710
+Nothing but a glorified paperweight.
+
+145
+00:10:16,500 --> 00:10:18,930
+I wonder what the chances are.
+
+146
+00:10:18,930 --> 00:10:21,230
+You mean the chance that his death was an accident?
+
+147
+00:10:21,230 --> 00:10:24,440
+Ha! It was hard not to laugh.
+
+148
+00:10:24,440 --> 00:10:25,470
+No kidding.
+
+149
+00:10:26,270 --> 00:10:29,600
+If your intuition didn't tell you that the moment you saw him, you're no detective.
+
+150
+00:10:29,900 --> 00:10:32,590
+I'm sure all the Enforcers had a gut feeling.
+
+151
+00:10:33,240 --> 00:10:35,240
+That was a murder. No doubt about it.
+
+152
+00:10:35,240 --> 00:10:36,820
+I wonder what the motive was.
+
+153
+00:10:37,510 --> 00:10:41,140
+Based on the victim's condition, I'm guessing...
+
+154
+00:10:41,140 --> 00:10:42,870
+it was a grudge.
+
+155
+00:10:46,330 --> 00:10:49,330
+Man, this place must really suck to work at.
+
+156
+00:10:49,330 --> 00:10:53,070
+I can't imagine being stuck in an offline environment in this day and age.
+
+157
+00:10:54,030 --> 00:10:58,840
+But the Psycho-Pass Hues for the workers here are rather stable.
+
+158
+00:11:00,130 --> 00:11:02,570
+No matter where you are, people find ways to entertain themselv—
+
+159
+00:11:02,570 --> 00:11:03,930
+How's it going?
+
+160
+00:11:03,930 --> 00:11:06,600
+Did you find anything suspicious?
+
+161
+00:11:06,600 --> 00:11:09,690
+No. The data you gave us showed nothing unusual—
+
+162
+00:11:13,160 --> 00:11:14,730
+Hey, yellow-green.
+
+163
+00:11:14,730 --> 00:11:17,930
+Gonna have lunch in your fancy private room again today?
+
+164
+00:11:22,050 --> 00:11:24,370
+What are they doing? That's terrible!
+
+165
+00:11:24,370 --> 00:11:27,700
+Oh, that. You can just leave them be.
+
+166
+00:11:27,700 --> 00:11:28,410
+Huh?
+
+167
+00:11:28,410 --> 00:11:30,710
+These things happen often.
+
+168
+00:11:31,600 --> 00:11:35,300
+Since this is an environment with few diversions,
+
+169
+00:11:35,300 --> 00:11:39,660
+we need someone to keep the others entertained, you know?
+
+170
+00:11:39,660 --> 00:11:41,100
+But isn't he...
+
+171
+00:11:41,100 --> 00:11:43,580
+If his Psycho-Pass gets cloudy enough to be an issue,
+
+172
+00:11:43,580 --> 00:11:45,670
+we'll assign him somewhere else right away.
+
+173
+00:11:45,670 --> 00:11:46,510
+As I told you,
+
+174
+00:11:46,950 --> 00:11:49,450
+we take great care in managing the
+psychological state of our employees.
+
+175
+00:11:52,310 --> 00:11:54,770
+This man has his own role to play, same as anyone else.
+
+176
+00:11:54,770 --> 00:11:57,680
+Sibyl might've recommended this workplace to him
+
+177
+00:11:57,680 --> 00:12:00,840
+because he was best suited for this purpose.
+
+178
+00:12:01,330 --> 00:12:03,530
+And I guess someone like you,
+who can laugh and turn a blind eye,
+
+179
+00:12:03,530 --> 00:12:06,610
+is best suited to run this place.
+
+180
+00:12:07,150 --> 00:12:09,410
+What a blessing the Sibyl System is, huh?
+
+181
+00:12:17,550 --> 00:12:18,920
+Are you okay?
+
+182
+00:12:23,690 --> 00:12:24,840
+Th-Thank you.
+
+183
+00:12:32,810 --> 00:12:34,850
+If what that chief guy said is true,
+
+184
+00:12:34,850 --> 00:12:38,820
+there's always one person whose Hue Check gets worse over time.
+
+185
+00:12:39,320 --> 00:12:43,390
+And this person is later transferred somewhere else without exception.
+
+186
+00:12:43,390 --> 00:12:46,450
+However, no one has been reassigned for the past year.
+
+187
+00:12:47,000 --> 00:12:51,330
+The deaths start happening a year ago, right?
+
+188
+00:12:51,330 --> 00:12:56,040
+And for that past year, the same person has been the target of bullying.
+
+189
+00:12:56,600 --> 00:12:58,420
+The data clearly indicates it.
+
+190
+00:12:59,130 --> 00:13:01,280
+Other people's Psycho-Passes show clear colors,
+
+191
+00:13:01,280 --> 00:13:04,220
+but there's one person whose Psycho-Pass is clouded.
+
+192
+00:13:08,110 --> 00:13:11,840
+Ah! Kanehara Yuji. This Hue Assessment shows yellow-green.
+
+193
+00:13:10,390 --> 00:13:15,600
+Age
+
+194
+00:13:10,390 --> 00:13:15,600
+Division:         2nd System Investigation Dept.
+
+195
+00:13:10,390 --> 00:13:15,600
+Sex
+
+196
+00:13:10,390 --> 00:13:15,600
+Birthdate
+
+197
+00:13:10,390 --> 00:13:15,600
+Height                                       Weight
+
+198
+00:13:10,390 --> 00:13:15,600
+Blood Type
+
+199
+00:13:11,840 --> 00:13:14,570
+I see. That explains his nickname.
+
+200
+00:13:15,970 --> 00:13:21,010
+Seems like the Hue Assessment results are open to everyone here.
+
+201
+00:13:21,010 --> 00:13:22,620
+This is crazy.
+
+202
+00:13:22,620 --> 00:13:27,320
+But this guy's latest measurement shows an improved Hue.
+
+203
+00:13:27,320 --> 00:13:29,980
+In fact, his Hue was the cloudiest...
+
+204
+00:13:30,710 --> 00:13:33,040
+on the day before Shioyama died.
+
+205
+00:13:36,840 --> 00:13:39,590
+Can't be... That doesn't make sense.
+
+206
+00:13:39,590 --> 00:13:43,200
+Why would a person's Psycho-Pass improve after killing someone?
+
+207
+00:13:43,920 --> 00:13:45,880
+The other employees
+
+208
+00:13:45,880 --> 00:13:49,990
+have all been taking out their stress on Kanehara himself.
+
+209
+00:13:49,990 --> 00:13:51,890
+It's not that strange when you think about it.
+
+210
+00:13:52,560 --> 00:13:55,200
+Back in the days when we didn't have cymatic scans,
+
+211
+00:13:55,200 --> 00:13:59,300
+these sorts of incidents weren't that uncommon.
+
+212
+00:13:59,300 --> 00:14:00,690
+Get real!
+
+213
+00:14:00,690 --> 00:14:03,300
+Is this more of that "detective's intuition" you're always talking about?
+
+214
+00:14:03,300 --> 00:14:05,440
+You're just deluding yourself!
+
+215
+00:14:05,440 --> 00:14:10,190
+It proves that latent criminals like you are the dregs of society!
+
+216
+00:14:12,600 --> 00:14:15,710
+We can't act on some speculation based on circumstantial evidence.
+
+217
+00:14:16,510 --> 00:14:17,830
+Our job...
+
+218
+00:14:17,830 --> 00:14:23,000
+is to maintain an orderly society based on the Crime Coefficients judged by Sibyl.
+
+219
+00:14:24,120 --> 00:14:27,470
+The kind of order where three people die in one year?
+
+220
+00:14:28,340 --> 00:14:30,500
+Gino, leave it to me.
+
+221
+00:14:30,500 --> 00:14:32,540
+I'll find out whether Kanehara is the killer.
+
+222
+00:14:32,540 --> 00:14:34,010
+I'll have conclusive evidence before you kn—
+
+223
+00:14:34,010 --> 00:14:35,020
+Enough already!
+
+224
+00:14:37,630 --> 00:14:39,430
+Inspector Ginoza, may I speak to you?
+
+225
+00:14:43,000 --> 00:14:45,530
+I agree with them.
+
+226
+00:14:45,530 --> 00:14:50,390
+I'd rather try Kougami's plan than risk letting a crime go unsolved.
+
+227
+00:14:51,080 --> 00:14:53,950
+Are you serious?
+
+228
+00:14:53,950 --> 00:14:56,380
+You're the one who's acting strange here!
+
+229
+00:14:57,100 --> 00:14:59,290
+Did something happen between you and Masaoka?
+
+230
+00:15:03,960 --> 00:15:08,280
+I... I can do a better job working with the Enforcers!
+
+231
+00:15:14,960 --> 00:15:19,310
+I see. So you've decided to be a fool after all.
+
+232
+00:15:21,380 --> 00:15:23,400
+You may be new, but you're still an Inspector.
+
+233
+00:15:23,830 --> 00:15:27,620
+If you think you can keep those hunting dogs under control, you're welcome to try.
+
+234
+00:15:29,390 --> 00:15:30,950
+Inspector Ginoza...
+
+235
+00:15:30,950 --> 00:15:36,410
+Since you insist on being a fool, you should try learning through experience like one.
+
+236
+00:15:36,410 --> 00:15:38,650
+That's the fastest route to understanding things.
+
+237
+00:15:41,560 --> 00:15:45,310
+Did something happen between Ginoza and Masaoka?
+
+238
+00:15:47,300 --> 00:15:51,120
+Wait, Akane, don't tell me you seriously asked Gino that to his face?!
+
+239
+00:15:51,120 --> 00:15:53,200
+You really shouldn't have brought that up.
+
+240
+00:15:53,200 --> 00:15:53,840
+What?
+
+241
+00:15:54,500 --> 00:15:57,990
+So we have a total of 200 meters' worth of communication cables, huh?
+
+242
+00:15:59,390 --> 00:16:02,640
+The furthest they'll reach is the elevator hall on the second floor.
+
+243
+00:16:03,260 --> 00:16:06,230
+Can you bring Kanehara out there?
+
+244
+00:16:06,230 --> 00:16:08,240
+I'll do my best.
+
+245
+00:16:09,120 --> 00:16:09,730
+Um...
+
+246
+00:16:10,050 --> 00:16:12,230
+You're just gonna talk to him, right?
+
+247
+00:16:15,280 --> 00:16:16,180
+Yeah.
+
+248
+00:16:26,150 --> 00:16:28,650
+So this is where you were, you yellow-green bastard!
+
+249
+00:16:29,170 --> 00:16:32,070
+Does your food taste better with blood on your hands?
+
+250
+00:16:32,070 --> 00:16:33,690
+Well? Does it?!
+
+251
+00:16:35,640 --> 00:16:38,540
+Shioyama, Asami, and Koriyama...
+
+252
+00:16:38,540 --> 00:16:40,710
+You killed them all, didn't you?!
+
+253
+00:16:40,710 --> 00:16:42,980
+Wh-Why are you saying that?
+
+254
+00:16:42,980 --> 00:16:46,980
+As long as you confine yourself in here, we can't prove your guilt.
+
+255
+00:16:47,370 --> 00:16:50,260
+But I hate your stinkin' guts all the same!
+
+256
+00:16:51,040 --> 00:16:55,840
+There's nothing we Enforcers like more than putting other latent criminals in their place.
+
+257
+00:16:55,840 --> 00:17:01,770
+So we're gonna keep you holed up in this factory like the rat you are.
+
+258
+00:17:01,770 --> 00:17:04,240
+We'll spread word all over the net
+
+259
+00:17:04,240 --> 00:17:08,130
+that Kanehara Yuji is a killer whose Psycho-Pass is clouded.
+
+260
+00:17:09,310 --> 00:17:10,830
+D-Don't!
+
+261
+00:17:10,830 --> 00:17:14,380
+Oops. This place is out of service range. Oh well.
+
+262
+00:17:15,010 --> 00:17:17,090
+I'm just gonna head over to the entrance for a bit.
+
+263
+00:17:17,680 --> 00:17:21,160
+You can just sit there, trembling on your hands and knees,
+
+264
+00:17:21,770 --> 00:17:25,380
+and wait as we tear your miserable life to pieces all around you!
+
+265
+00:17:32,420 --> 00:17:34,240
+Wh-What're you doing?!
+
+266
+00:17:34,980 --> 00:17:35,950
+Kougami!
+
+267
+00:17:36,260 --> 00:17:40,120
+Now we'll know for sure if Kanehara is someone who's capable of murder.
+
+268
+00:17:40,880 --> 00:17:43,660
+He doesn't have time to prepare anything in advance.
+
+269
+00:17:44,220 --> 00:17:48,880
+If he wants to kill me right away, he'll do it the same way he did before.
+
+270
+00:17:48,880 --> 00:17:50,720
+When he does, we can prove his crime.
+
+271
+00:17:50,720 --> 00:17:52,340
+Th-That's crazy!
+
+272
+00:17:51,840 --> 00:17:52,340
+BT Hands
+
+273
+00:17:51,840 --> 00:17:52,340
+Camera Search Mgmt
+
+274
+00:17:51,840 --> 00:17:52,340
+G Terminal Information
+
+275
+00:17:51,840 --> 00:17:52,340
+Security Cameras
+
+276
+00:17:51,840 --> 00:17:52,340
+Service Search Mgmt
+
+277
+00:17:51,840 --> 00:17:52,340
+Navigation Search Results
+
+278
+00:18:01,990 --> 00:18:06,650
+If he's innocent, we'll be able to get out safely.
+
+279
+00:18:07,420 --> 00:18:09,210
+And we'll all live happily ever after.
+
+280
+00:18:09,920 --> 00:18:12,520
+Inspector... which would you bet on?
+
+281
+00:18:12,520 --> 00:18:13,360
+I can't...
+
+282
+00:18:18,020 --> 00:18:19,490
+You brought this on yourselves.
+
+283
+00:18:19,490 --> 00:18:22,450
+There's our answer, Inspector.
+
+284
+00:18:22,450 --> 00:18:26,710
+Once you're gone, my Hue can be cleansed!
+
+285
+00:18:29,100 --> 00:18:29,580
+Run!
+
+286
+00:18:34,300 --> 00:18:35,700
+I won't let you get away.
+
+287
+00:18:35,700 --> 00:18:37,770
+I'll never let you get away.
+
+288
+00:18:37,770 --> 00:18:40,180
+I'll kill you, right here and now!
+
+289
+00:18:54,110 --> 00:18:55,980
+Dammit!
+
+290
+00:19:10,960 --> 00:19:14,500
+Why... Why would you do something so reckless?!
+
+291
+00:19:14,500 --> 00:19:17,880
+This is about finding the truth behind a matter of life and death!
+
+292
+00:19:17,880 --> 00:19:22,450
+Of course we'd need to put our lives in the line!
+
+293
+00:19:26,260 --> 00:19:28,730
+Go faster! We're not gonna make it!
+
+294
+00:19:28,730 --> 00:19:31,190
+You don't have to tell me that!
+
+295
+00:19:35,120 --> 00:19:36,460
+This is the place.
+
+296
+00:19:36,460 --> 00:19:41,440
+We've already caught the criminal red-handed! We need to call for backup and...
+
+297
+00:19:56,920 --> 00:19:59,380
+Suppression System, online.
+
+298
+00:20:01,800 --> 00:20:03,010
+Kougami!
+
+299
+00:20:07,880 --> 00:20:09,140
+You assholes!
+
+300
+00:20:09,140 --> 00:20:12,340
+User authentication: Enforcer Kougami Shinya.
+
+301
+00:20:22,270 --> 00:20:25,280
+Crime Coefficient is 265.
+
+302
+00:20:25,280 --> 00:20:26,740
+He's a target for enforcement action.
+
+303
+00:20:39,750 --> 00:20:40,880
+Kougami!
+
+304
+00:20:40,880 --> 00:20:44,010
+Target's Threat Judgement has been updated.
+
+305
+00:20:44,720 --> 00:20:48,020
+Enforcement mode is Destroy Decomposer.
+
+306
+00:20:49,380 --> 00:20:52,030
+Target will be completely eliminated.
+
+307
+00:20:52,030 --> 00:20:53,680
+Please exercise caution.
+
+308
+00:21:03,080 --> 00:21:05,150
+Hey, Ko!
+
+309
+00:21:16,420 --> 00:21:20,520
+As always, the Dominators kick ass when they get serious.
+
+310
+00:21:27,890 --> 00:21:31,710
+He said that he wanted to be a detective, not just a hunting dog.
+
+311
+00:21:31,710 --> 00:21:33,850
+But the look in his eyes...
+
+312
+00:21:35,200 --> 00:21:36,810
+was unmistakably...
+
+313
+00:21:37,670 --> 00:21:40,650
+that of a carnivore which had cornered its prey.
+
+314
+00:21:40,570 --> 00:21:46,500
+It seems all fairy tales are dead
+
+315
+00:21:45,760 --> 00:21:50,480
+It seems all fairy tales are dead
+
+316
+00:21:51,230 --> 00:21:55,830
+In a hospital ward of brick stones
+
+317
+00:21:56,690 --> 00:22:00,920
+my voice is too coarse to sing
+
+318
+00:22:01,910 --> 00:22:06,040
+Outside in the foggy haze
+
+319
+00:22:07,250 --> 00:22:11,640
+a red moon glows
+
+320
+00:22:12,590 --> 00:22:17,040
+Look at me
+
+321
+00:22:17,860 --> 00:22:22,560
+Do not avert your gaze
+
+322
+00:22:23,940 --> 00:22:26,880
+Behind black bars
+
+323
+00:22:26,680 --> 00:22:29,560
+I was born
+
+324
+00:22:29,360 --> 00:22:32,000
+I wish there were a punishment for evil
+
+325
+00:22:31,800 --> 00:22:34,870
+Always I need you
+
+326
+00:22:34,670 --> 00:22:37,540
+Now, grant us justice
+
+327
+00:22:37,340 --> 00:22:40,060
+before chaos takes us all
+
+328
+00:22:39,860 --> 00:22:44,330
+Pay the price of fate and let us go together,
+
+329
+00:22:44,010 --> 00:22:50,080
+nameless beasts
+
+330
+00:22:50,890 --> 00:22:54,810
+This is a world where the mental state and personal tendencies of humans can be quantified.
+While all sorts of inclinations are recorded and policed, these measured numbers used to judge people's souls are commonly called "Psycho-Pass".
+
+331
+00:22:50,890 --> 00:22:54,810
+This story is a work of fiction. The names of all individuals and organizations that appear
+in this show are fictitious and any similarity to those in existence in the real world is purely coincidental.
