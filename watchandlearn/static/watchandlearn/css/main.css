@@ -117,3 +117,36 @@ html, body{
     display: table-cell;
     vertical-align: middle;
 }
+
+#popup{
+    position: fixed;
+    top, left: 0;
+    width: 1em;
+    height: 1em;
+    background-color: rgb(253,124,44);
+    border-radius: .2em;
+    z-index: 2147483638;
+    opacity: 0;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    padding: .1em;
+}
+#vid{
+    z-index: 0;
+}
+#tip{
+    position:fixed;
+    top, left: 0;
+    width:100%;
+    height: 2em;
+    z-index: 2147483637;
+    background-color: black;
+    color: white;
+    opacity: 0;
+    padding-left: 3em;
+
+}
+#tip span{
+    opacity: 1;
+}
