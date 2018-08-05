@@ -47,7 +47,7 @@ class Quiz(models.Model):
 
 class Episode(models.Model):
 	title = models.CharField(max_length=100)
-	image = models.ImageField(upload_to="watchandlearn/static/watchandlearn/images/episodes")
+	image = models.ImageField(upload_to="watchandlearn/static/watchandlearn/images/episodes/")
 	video = models.CharField(max_length=100)
 	number = models.IntegerField(default=1)
 	subtitle = models.TextField(default="")
