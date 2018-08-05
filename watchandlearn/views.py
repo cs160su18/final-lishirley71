@@ -12,6 +12,7 @@ from .forms import *
 from watchandlearn.models import *
 from my_secrets import secrets
 import re, requests, json, urllib
+from django.template import *
 
 HIGHEST_SCORE = 6
 
@@ -32,11 +33,11 @@ def assessment(request):
 
 # @login_required
 def recommended(request):
-	return render(
-				request,
-				'watchandlearn/recommended.html',
-				context={},
-			)
+    series = Series.objects.all()
+    jsonSeries = serialize('json', series)
+    
+    t = TemplateResponse(request, "watchandlearn/recommended.html", {'series':series})
+    return t.render()
 
 # @login_required
 def episodes(request):

@@ -33,7 +33,7 @@ class Interest(models.Model):
 
 class Series(models.Model):
 	title = models.CharField(max_length=100)
-	image = models.CharField(max_length=100)
+	image = models.ImageField(upload_to="watchandlearn/images/")
 	difficulty = models.IntegerField(default=0)
 	topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
 	def __str__(self):
