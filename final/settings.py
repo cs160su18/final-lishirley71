@@ -127,7 +127,9 @@ LOGIN_REDIRECT_URL = '/'
 
 MEDIA_URL = '/media/' 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, '/watchandlearn/')
+#MEDIA_ROOT = os.path.join(BASE_DIR, '/watchandlearn/')
+
+MEDIA_ROOT = BASE_DIR
 
 STATICFILES_DIRS = ('/watchandlearn/static/',)
 
