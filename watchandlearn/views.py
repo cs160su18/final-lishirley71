@@ -37,7 +37,7 @@ def recommended(request):
     return render(
         request, 
         "watchandlearn/recommended.html", 
-        context={'series':json.dumps(series)}
+        context={'series':series}
     )
 
 # @login_required
