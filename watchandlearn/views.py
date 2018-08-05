@@ -37,8 +37,7 @@ def recommended(request):
     jsonSeries = serialize('json', series)
     
     t = TemplateResponse(request, "watchandlearn/recommended.html", {'series':series})
-    
-	return t.render()
+    return t.render()
 
 # @login_required
 def episodes(request):
