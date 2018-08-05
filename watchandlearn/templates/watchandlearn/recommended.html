@@ -42,21 +42,14 @@
     <script>
         function addSeries(series){
             if(Document.getElementById(series.topic)){
-               $('contents').append("<div class='row' id='"+series.topic+"'><div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div></div>") 
+               $('contents').append("<div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div>") 
             }else{
-                
+                $('contents').append("<div class='row' id='"+series.topic+"'><div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div></div>") 
             }
         }
         
-        {% if series %}
-        {% for s in series %}
-            if(Document.getElementById({{series.topic}})){
-               Document.getElementById({{series.topic}}).append("<div class='col col-4'><img class='img-responsive' src='"+{{series.image}}+"'></div>") 
-            }else{
-                $('contents').append("<div class='row' id='"+{{series.topic}}+"'><div class='col col-4'><img class='img-responsive' src='"+{{series.image}}+"'></div></div>")
-            }
-         {% endfor %}
-         {% endif %}
-    </script>
+        console.log(series);
+        
+         
   </body>
 </html>
