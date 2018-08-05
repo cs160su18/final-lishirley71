@@ -1,6 +1,6 @@
 .slidecontainer {
   width: 100%;
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
 }
 
 .slider {
@@ -35,7 +35,7 @@
 }
 
 .assessment-category-title {
-  padding-left: 10px; 
+  padding-left: 10px;
 }
 
 .flex-12 {
@@ -193,6 +193,10 @@ html, body{
 .previewImg{
   height: 50vh;
   min-width: 30vw;
+}
+
+#episodeImage {
+  display: none;
 }
 
 /*quiz*/
