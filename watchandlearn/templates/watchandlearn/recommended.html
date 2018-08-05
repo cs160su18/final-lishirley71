@@ -41,23 +41,24 @@
       
     <script>
         function addSeries(series){
-            if(Document.getElementById(series["topic"])){
-               $('contents').append("<div class='col col-4'><img class='img-responsive' src='"+series['image']+"'></div>") 
+            var topic = document.getElementById(series['fields']["topic"])
+            if(topic){
+               topic.append("<div class='col col-4'><img class='img-responsive' src='"+series['fields']['image']+"'></div>") 
             }else{
-                $('contents').append("<div class='row' id='"+series['topic']+"'><div class='col col-4'><img class='img-responsive' src='"+series['image']+"'></div></div>") 
+                $('.contents').append("<div class='row' id='"+series['fields']['topic']+"'><div class='col col-4'><img class='img-responsive' src='"+series['fields']['image']+"'></div></div>") 
             }
         }
         var series = {{ series|safe }};
-        console.log(series);
-        console.log(series[0]);
-        console.log(series[0]["topic"]);
+        //console.log(series);
+        //console.log(series[0]);
+        //console.log(series[0]["fields"]["topic"]['title']);
         
         for (s in series){
-            addSeries(s);
+            console.log(series[s])
+            addSeries(series[s]);
         }
         
       </script>
-        
          
   </body>
 </html>
