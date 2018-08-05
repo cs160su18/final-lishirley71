@@ -41,16 +41,20 @@
       
     <script>
         function addSeries(series){
-            if(Document.getElementById(series.topic)){
-               $('contents').append("<div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div>") 
+            if(Document.getElementById(series["topic"])){
+               $('contents').append("<div class='col col-4'><img class='img-responsive' src='"+series['image']+"'></div>") 
             }else{
-                $('contents').append("<div class='row' id='"+series.topic+"'><div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div></div>") 
+                $('contents').append("<div class='row' id='"+series['topic']+"'><div class='col col-4'><img class='img-responsive' src='"+series['image']+"'></div></div>") 
             }
         }
         var series = {{ series|safe }};
         console.log(series);
         console.log(series[0]);
-        console.log(series[0]["fields"]);
+        console.log(series[0]["topic"]);
+        
+        for (s in series){
+            addSeries(s);
+        }
         
       </script>
         
