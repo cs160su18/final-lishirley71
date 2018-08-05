@@ -17,34 +17,36 @@ from django.template import *
 HIGHEST_SCORE = 6
 
 def index(request):
-  return render(
-      request,
-      'watchandlearn/index.html',
-      context={},
-  ) 
+    return render(
+        request,
+        'watchandlearn/index.html',
+        context={},
+    ) 
 
 # @login_required
 def assessment(request):
-  return render(
-      request,
-      'watchandlearn/assessment.html',
-      context={},
-  ) 
+    return render(
+        request,
+        'watchandlearn/assessment.html',
+        context={},
+    ) 
 
 # @login_required
 def recommended(request):
-  series = Series.objects.all()
-  return render(
-      request, 
-      "watchandlearn/recommended.html", 
-      context={'series':series}
-  )
+    series = Series.objects.all()
+    return render(
+        request, 
+        "watchandlearn/recommended.html", 
+        context={'series':series}
+    )
 
 # @login_required
-def episodes(request, pk):
-  series = get_object_or_404(Series, pk=pk)
-  episodes = Episode.objects.all().filter(series__pk=pk)
-  return render(request, 'watchandlearn/episodes.html', context={'series': series, "episodes": episodes},)
+def episodes(request):
+	return render(
+				request,
+				'watchandlearn/episodes.html',
+				context={},
+			)
 
 # @login_required
 def quiz(request, pk):
@@ -52,13 +54,15 @@ def quiz(request, pk):
   questions = Question.objects.all().filter(quiz__pk=pk)
   return render( request, 'watchandlearn/quiz.html', context={'questions': questions},)
 
-# @login_required
 def episode_watch(request, pk):
-  episode = get_object_or_404(Episode, pk=pk)
-  
-  return render(request, 'watchandlearn/episode_watch.html', context={'episode': episode})
 
-class EpisodeDetailView(generic.DetailView):
+    episode = get_object_or_404(Episode, pk=pk)
+    
+    return render(request, 'watchandlearn/episode_watch.html', context={'episode': episode})
+
+
+# @login_required
+class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
   model = Episode
 
   # HELPER METHODS
