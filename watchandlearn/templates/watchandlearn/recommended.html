@@ -5,12 +5,7 @@
     
     <script src="{% static '/watchandlearn/javascript/episodes.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static '/watchandlearn/css/episodes.css' %}" />
-
-    <style>
-     
-    </style>
-
-
+    
     <div class = "container"">
       <div class = "topBar">
          
@@ -57,5 +52,20 @@
       {% endfor %}
 
     </div>
+    
+    <script>
+        function addSeries(series){
+            if(Document.getElementById(series.topic)){
+               $('contents').append("<div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div>") 
+            }else{
+                $('contents').append("<div class='row' id='"+series.topic+"'><div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div></div>") 
+            }
+        }
+        var s = JSON.parse('{{ series|safe }}');
+        console.log(s[1].topic);
+      </script>
 
 {% endblock %}
+      
+
+
