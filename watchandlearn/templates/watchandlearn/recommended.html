@@ -48,7 +48,9 @@
             }
         }
         var series = {{ series|safe }};
-        console.log(series);           
+        console.log(series);
+        console.log(series[0]);
+        console.log(series[0]["fields"]);
         
       </script>
         
