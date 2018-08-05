@@ -200,6 +200,6 @@ def feedback(request, pk):
       question = questions[i]
       answers.append(str(question.answer) == submitted_answer)
     print(answers)
-  return render(request, 'watchandlearn/feedback.html', context={'questions': question, 'answers': answers},)
+  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers},)
 
 
