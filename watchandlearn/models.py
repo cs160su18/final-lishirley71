@@ -13,7 +13,7 @@ class Profile(models.Model):
 	composite = models.IntegerField(default=0)
 	level = models.IntegerField(default=1)
 	experience = models.IntegerField(default=0)
-	
+
 	def __str__(self):
 		return self.user.username
 
@@ -49,6 +49,7 @@ class Episode(models.Model):
 	title = models.CharField(max_length=100)
 	image = models.CharField(max_length=100)
 	video = models.CharField(max_length=100)
+	number = models.IntegerField(default=1)
 	subtitle = models.TextField(default="")
 	quiz = models.OneToOneField(Quiz, on_delete=models.CASCADE)
 	series = models.ForeignKey(Series, on_delete=models.CASCADE)
@@ -63,6 +64,6 @@ class Question(models.Model):
 	option1 = models.CharField(max_length=100)
 	option2 = models.CharField(max_length=100)
 	option3 = models.CharField(max_length=100)
-	
+
 	def __str__(self):
 		return self.title
