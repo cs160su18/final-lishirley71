@@ -33,11 +33,11 @@ def assessment(request):
 
 # @login_required
 def recommended(request):
-    series = Series.objects.all()
+    series = serializers.serialize('json', Series.objects.all())
     return render(
         request, 
         "watchandlearn/recommended.html", 
-        context={'series':series}
+        context={'series':json.dumps(series)}
     )
 
 # @login_required
