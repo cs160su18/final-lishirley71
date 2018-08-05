@@ -48,7 +48,10 @@ input {
 }
 
 html, body{
-              width: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    height:100vh;
 }
 
 .topBar{
@@ -108,7 +111,7 @@ html, body{
     text-align: center;
     margin-bottom: 5em;
     color: white;
-   
+
 }
 
 .area{
@@ -149,4 +152,63 @@ html, body{
 }
 #tip span{
     opacity: 1;
+}
+
+/*Episode detail*/
+
+.row1col1, .row1col2 {
+  overflow: scroll;
+  height: 90vh;
+}
+.row2col1, .row2col2 {
+  height: 10vh;
+}
+
+.c1 {
+  height: 90%;
+}
+
+.c2 {
+  height: 10%;
+  position: absolute;
+  bottom:0;
+}
+
+#preview {
+  height: 50vh;
+  min-width: 30vw;
+  margin: auto;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  background-color: grey;
+}
+
+/*quiz*/
+
+.btns{
+  height: 10%;
+  position: absolute;
+  bottom:0;
+}
+
+.quiz{
+  overflow:scroll;
+  height: 70%;
+  margin-top:10px;
+}
+
+.question{
+  padding-left: 5vw;
+  margin-top:10px;
+}
+
+.choices{
+  margin-top:10px;
+  padding-left: 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.xpVal {
+  margin-top: 10px;
 }
