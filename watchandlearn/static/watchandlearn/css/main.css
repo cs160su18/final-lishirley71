@@ -205,20 +205,24 @@ html, body{
 /*quiz*/
 
 .btns{
-  height: 10%;
   position: absolute;
   bottom:0;
 }
 
 .quiz{
-  overflow:scroll;
-  height: 70%;
-  margin-top:10px;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  margin-top:30px;
+  padding: 10px;
 }
 
 .question{
   padding-left: 5vw;
   margin-top:10px;
+}
+
+.questionNumber{
+  display: flex;
 }
 
 .choices{
@@ -230,4 +234,8 @@ html, body{
 
 .xpVal {
   margin-top: 10px;
+}
+
+.question-choice{
+  padding-bottom: 1vh;
 }
