@@ -1,55 +1,14 @@
-<!doctype html>
-<html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="../../static/watchandlearn/css/main.css" />
-    </head>
-    <body>
-        <iframe id="vid" src="{{ episode.video }}" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
-        
-        <span id="popup">!</span>
-        <div id="tip"><span>pro tip right here</span></div>
-        
-        <script type="text/javascript">
-            var tag = document.createElement('script');
-            tag.id="iframe";
-            tag.src="https://www.youtube.com/iframe_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-            
-            var player;
-            function onYouTubeIframeAPIReady() {
-                player = new YT.Player('vid', {
-                  events: {
-                    'onReady': onPlayerReady
-                  }
-                });
-                
-            }
-            
-            function onPlayerReady(event){
-                event.target.playVideo();
-                function updateTime() {
-                    var videotime = 0;
-                  if(player && player.getCurrentTime) {
-                    videotime = player.getCurrentTime();
+{% extends "watchandlearn/base_generic.html" %}
 
-                    console.log("time: "+Math.round(videotime));
-                      
-                      if(Math.round(videotime)==206){
-                          $("#popup").css("opacity","1");
-                      }
-                      
-                      $("#popup").click(function(){
-                          $("#tip").css("opacity","1");
-                      })
-                  }
-                }
-        timeupdater = setInterval(updateTime, 100);
-            }
-    
-            
+{% block content %}
+  {% load static %}
+  <script src="{% static '/watchandlearn/javascript/episode_watch.js' %}"></script>
 
-        </script>
-    </body>
-</html>
+   <iframe id="vid" src="{{ episode.video }}" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+
+  <span id="popup">!</span>
+  <div id="tip"><span>pro tip right here</span></div>
+
+{% endblock %}
+           
+
