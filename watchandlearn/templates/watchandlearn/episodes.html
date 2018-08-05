@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href="../../static/watchandlearn/css/main.css" />
-  </head>
-  <body>
+{% extends "watchandlearn/base_generic.html" %}
+
+{% block content %}
+    {% load static %}
+
+    <script src="{% static '/watchandlearn/javascript/episodes.js' %}"></script>
+   
     <div>
         <div class = "topBar">
            Pokemon Black & White
@@ -13,48 +12,48 @@
         <div class="contents">
             <div class = "container">
                 <div class = "row">
-                    <div  class = "col col-6 ep left">
+                    <div  class = "col-6 ep">
                         <div class="area">
                             <span><h1>EP 1</h1></span>
                         </div>
                     </div>
-                    <div class = "col col-6 ep right">
+                    <div class = "col-6 ep">
                         <div class="area">
                             <span><h1>EP 2</h1></span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class = "col col-6 ep left">
+                    <div class = "col col-6 ep">
                        <div class="area">
                             <span><h1>EP3</h1></span>
                         </div>
                     </div>
-                    <div class = "col col-6 ep right">
+                    <div class = "col col-6 ep">
                         <div class="area">
                             <span><h1>EP 4</h1></span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class = "col col-6 ep left">
+                    <div class = "col col-6 ep">
                        <div class="area">
                             <span><h1>EP 5</h1></span>
                         </div>
                     </div>
-                    <div class = "col col-6 ep right">
+                    <div class = "col col-6 ep">
                         <div class="area">
                             <span><h1> EP 6</h1></span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class = "col col-6 ep left">
+                    <div class = "col col-6 ep">
                        <div class="area">
                             <span><h1>EP 7</h1></span>
                         </div>
                     </div>
-                    <div class = "col col-6 ep right">
+                    <div class = "col col-6 ep">
                         <div class="area">
                             <span><h1>EP 8</h1></span>
                         </div>
@@ -64,11 +63,5 @@
             </div>
         </div>
     </div>
-      
-    <script>
-        var images = {
-            
-        }
-    </script>
-  </body>
-</html>
+
+{% endblock %}
