@@ -121,8 +121,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
-
 LOGIN_REDIRECT_URL = '/'
 
 MEDIA_URL = '/media/' 
@@ -131,6 +129,10 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR
 
-STATICFILES_DIRS = ('/watchandlearn/static/',)
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True

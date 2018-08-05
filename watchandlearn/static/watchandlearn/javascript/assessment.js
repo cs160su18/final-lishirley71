@@ -1,4 +1,4 @@
-alert("It works");
+
 	var score = 0;
 
 	var vocabScore = 0;
