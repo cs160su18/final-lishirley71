@@ -47,8 +47,10 @@
                 $('contents').append("<div class='row' id='"+series.topic+"'><div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div></div>") 
             }
         }
-        var s = {{ series|safe }};
-        console.log(s);
+        var series = {{ series|safe }};
+        for s in series{
+            console.log(s["topic"]);           
+        }
       </script>
         
          
