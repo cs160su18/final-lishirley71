@@ -66,4 +66,4 @@ class Question(models.Model):
 	option3 = models.CharField(max_length=100)
 
 	def __str__(self):
-		return self.title
+		return self.question_text

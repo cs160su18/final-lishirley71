@@ -48,12 +48,10 @@ def episodes(request):
 			)
 
 # @login_required
-def quiz(request):
-	return render(
-				request,
-				'watchandlearn/quiz.html',
-				context={},
-			)
+def quiz(request, pk):
+  quiz = get_object_or_404(Quiz, pk=pk)
+  questions = Question.objects.all().filter(quiz__pk=pk)
+  return render( request, 'watchandlearn/quiz.html', context={'questions': questions},)
 
 def episode_watch(request, pk):
 
@@ -192,11 +190,17 @@ def lvlup(request):
 			)
 
 # @login_required
-def feedback(request):
-	return render(
-				request,
-				'watchandlearn/feedback.html',
-				context={},
-			)
+def feedback(request, pk):
+  if request.method == 'POST':
+    quiz = get_object_or_404(Quiz, pk=pk)
+    questions = list(Question.objects.all().filter(quiz__pk=pk))
+    answers = []
+    i=1
+    for i in range(len(questions)):
+      submitted_answer = request.POST.get('question' + str(i))
+      question = questions[i]
+      answers.append(str(question.answer) == submitted_answer)
+    print(answers)
+  return render(request, 'watchandlearn/feedback.html', context={'questions': question, 'answers': answers},)
 
 
