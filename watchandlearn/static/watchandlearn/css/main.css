@@ -1,57 +1,66 @@
 .slidecontainer {
-    width: 100%;
+  width: 100%;
+  padding-bottom: 20px; 
 }
 
 .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 25px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
 }
 
 .slider:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #4CAF50;
-    cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #4CAF50;
-    cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.assessment-category-title {
+  padding-left: 10px; 
+}
+
+.flex-12 {
+  flex: 1 1 12em;
 }
 
 legend {
-    background-color: #000;
-    color: #fff;
-    padding: 3px 6px;
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
 }
 
 .output {
-    font: 1rem 'Fira Sans', sans-serif;
+  font: 1rem 'Fira Sans', sans-serif;
 }
 
 input {
-    margin: .4rem;
+  margin: .4rem;
 }
 
 html, body{
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-    height:100vh;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  height:100vh;
 }
 
 .topBar{
@@ -67,7 +76,6 @@ html, body{
 #search{
   position: absolute;
   right: 5em;
-
 }
 
 .contents{
@@ -87,7 +95,6 @@ html, body{
 
 .anime{
   display: inline;
-
 }
 
 .anime img{
@@ -107,47 +114,47 @@ html, body{
 }
 
 .ep{
-    background-color: darkgray;
-    text-align: center;
-    margin-bottom: 5em;
-    color: white;
+  background-color: darkgray;
+  text-align: center;
+  margin-bottom: 5em;
+  color: white;
 
 }
 
 .area{
-     width: 20em;
-    height: 465px;
-    display: table-cell;
-    vertical-align: middle;
+  width: 20em;
+  height: 465px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 #popup{
-    position: fixed;
-    top, left: 0;
-    width: 1em;
-    height: 1em;
-    background-color: rgb(253,124,44);
-    border-radius: .2em;
-    z-index: 2147483638;
-    opacity: 0;
-    font-size: 2em;
-    color: white;
-    text-align: center;
-    padding: .1em;
+  position: fixed;
+  top, left: 0;
+  width: 1em;
+  height: 1em;
+  background-color: rgb(253,124,44);
+  border-radius: .2em;
+  z-index: 2147483638;
+  opacity: 0;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  padding: .1em;
 }
 #vid{
-    z-index: 0;
+  z-index: 0;
 }
 #tip{
-    position:fixed;
-    top, left: 0;
-    width:100%;
-    height: 2em;
-    z-index: 2147483637;
-    background-color: black;
-    color: white;
-    opacity: 0;
-    padding-left: 3em;
+  position:fixed;
+  top, left: 0;
+  width:100%;
+  height: 2em;
+  z-index: 2147483637;
+  background-color: black;
+  color: white;
+  opacity: 0;
+  padding-left: 3em;
 
 }
 #tip span{

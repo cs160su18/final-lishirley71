@@ -1,161 +1,114 @@
 {% extends "watchandlearn/base_generic.html" %}
 
 {% block content %}
-<h1> Self Assessment </h1>
-		<div class="slidecontainer">
-			<p>Vocabulary: <span id="vocabText"></span></p>
-	  		<input type="range" min="1" max="100" value="50" class="slider" id="vocabulary">
-		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div class="slidecontainer">
-			<p>Reading: <span id="readingText"></span></p>
-	  		<input type="range" min="1" max="100" value="50" class="slider" id="reading">
-		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div class="slidecontainer">
-			<p>Writing: <span id="writingText"></span></p>
-	  		<input type="range" min="1" max="100" value="50" class="slider" id="writing">
-		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div class="slidecontainer">
-			<p>Grammar: <span id="grammarText"></span></p>
-	  		<input type="range" min="1" max="100" value="50" class="slider" id="grammar">
-		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<fieldset>
-		    <legend>Interested Topics</legend>
 
-		    <div>
-		        <input type="checkbox" id="action" name="feature"
-		               value="action" checked />
-		        <label for="action">Action</label>
-		    </div>
+	{% load static %}
 
-		    <div>
-		        <input type="checkbox" id="adventure" name="feature"
-		               value="adventure" />
-		        <label for="adventure">Adventure</label>
-		    </div>
+	<script src="{% static '/watchandlearn/javascript/assessment.js' %}"></script>
 
-		    <div>
-		        <input type="checkbox" id="romance" name="feature"
-		               value="romance" />
-		        <label for="romance">Romance</label>
-		    </div>
+	<h1 class="ml-3"> Self Assessment </h1>
 
-		    <div>
-		      <button type="submit">Submit</button>
-		    </div>
+		<div class="col">
+			<div class="row ml-2 mr-2">
+				<div class="slidecontainer">
+					<p class=assessment-category-title>Vocabulary: <span id="vocabText"></span></p>
+			  		<input type="range" min="1" max="100" value="50" class="slider" id="vocabulary">
+				</div>
+			</div>
+
+			<div class="row ml-2 mr-2">
+				<div class="slidecontainer">
+					<p class=assessment-category-title>Reading: <span id="readingText"></span></p>
+			  		<input type="range" min="1" max="100" value="50" class="slider" id="reading">
+				</div>
+			</div>
+
+			<div class="row ml-2 mr-2">
+				<div class="slidecontainer">
+					<p class=assessment-category-title>Writing: <span id="writingText"></span></p>
+			  		<input type="range" min="1" max="100" value="50" class="slider" id="writing">
+				</div>
+			</div>
+
+			<div class="row ml-2 mr-2">
+				<div class="slidecontainer">
+					<p class=assessment-category-title>Grammar: <span id="grammarText"></span></p>
+			  		<input type="range" min="1" max="100" value="50" class="slider" id="grammar">
+				</div>
+			</div>
+
+
+			<fieldset>
+			  <legend>Interested Topics</legend>
+		  <div class="row ml-3">
+
+		    <div class="col flex-12">
+
+		    	<div class="row ml-3">
+			        <input type="checkbox" id="fantasy-checkbox" name="feature" value="fantasy" />
+			        <label for="fantasy">Fantasy</label>
+			    </div>
+
+			    <div class="row ml-3">
+			        <input type="checkbox" id="action-checkbox" name="feature" value="action" checked />
+			        <label for="action">Action</label>
+			    </div>
+
+			    <div class="row ml-3">
+			        <input type="checkbox" id="comedy-checkbox" name="feature" value="comedy" />
+			        <label for="comedy">Comedy</label>
+			    </div>
+
+			    <div class="row ml-3">
+			        <input type="checkbox" id="adventure-checkbox" name="feature" value="adventure" />
+			        <label for="adventure">Adventure</label>
+			    </div>
+
+			    <div class="row ml-3">
+			        <input type="checkbox" id="romance-checkbox" name="feature" value="romance" />
+			        <label for="romance">Romance</label>
+			    </div>
+			  </div>
+
+			  <div class="col flex-12">
+
+		    	<div class="row ml-3">
+			        <input type="checkbox" id="sliceoflife-checkbox" name="feature" value="sliceoflife" />
+			        <label for="sliceoflife">Slice of Life</label>
+			    </div>
+
+			    <div class="row ml-3">
+			        <input type="checkbox" id="sports-checkbox" name="feature" value="sports" checked />
+			        <label for="sports">Sports</label>
+			    </div>
+
+			    <div class="row ml-3">
+			        <input type="checkbox" id="historical-checkbox" name="feature" value="historical" />
+			        <label for="historical">Historical</label>
+			    </div>
+			    
+			    <div class="row ml-3">
+			        <input type="checkbox" id="sciencefiction-checkbox" name="feature" value="sciencefiction" />
+			        <label for="sciencefiction">Science Fiction</label>
+			    </div>
+
+			    <div class="row ml-3">
+			        <input type="checkbox" id="drama-checkbox" name="feature" value="drama" />
+			        <label for="drama">Drama</label>
+			    </div>
+			  </div>
+			</div>
+		</fieldset>
+	</div>
+
+
+			    <div class="row ml-5 mt-3">
+			    	<center>
+			      	<button type="submit">Submit</button>
+			    	</center>
+			    </div>
 		</fieldset>
 
+	</div>
+
 {% endblock %}
-
-
-
-
-
-
-
-
-
-<script type="text/javascript"> 
-
-	var score = 0;
-
-	var vocabScore = 0;
-	var readingScore = 0;
-	var writingScore = 0;
-	var grammarScore = 0;
-
-
-	var vocabSlider = document.getElementById("vocabulary");
-	var vocabOutput = document.getElementById("vocabText");
-	vocabOutput.innerHTML = vocabSlider.value;
-
-	vocabSlider.oninput = function() {
-	  vocabScore = this.value;
-	  vocabOutput.innerHTML = vocabScore;
-	  score = score + vocabScore;
-	}
-	var readingSlider = document.getElementById("reading");
-	var readingOutput = document.getElementById("readingText");
-	readingOutput.innerHTML = readingSlider.value;
-
-	readingSlider.oninput = function() {
-	  readingScore = this.value;
-	  readingOutput.innerHTML = readingScore;
-	  score = score + readingScore;
-	}
-	var writingSlider = document.getElementById("writing");
-	var writingOutput = document.getElementById("writingText");
-	writingOutput.innerHTML = writingSlider.value;
-
-	writingSlider.oninput = function() {
-	  writingScore = this.value;
-	  writingOutput.innerHTML = writingScore;
-	  score = score + writingScore;
-	}
-	var grammarSlider = document.getElementById("grammar");
-	var grammarOutput = document.getElementById("grammarText");
-	grammarOutput.innerHTML = grammarSlider.value;
-
-	grammarSlider.oninput = function() {
-	  grammarScore = this.value;
-	  grammarOutput.innerHTML = grammarScore;
-	  score = score + grammarScore;
-	}
-
-</script>
