@@ -37,7 +37,13 @@
                 
                 {% if series %}
                     {% for s in series %}
-                        <div class = "category">{{s.topic}}</div>
+                        <div class = "category">        {{s.topic}}
+                        </div>
+                        <div class="row">
+                            <div class="col col-6 anime left">
+                                {{s.image}}
+                            </div>
+                        </div>
                     {% endfor %}
                 {% endif %}
                 
