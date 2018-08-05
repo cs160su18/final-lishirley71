@@ -10,9 +10,10 @@
         <div class="col-sm-6 row1col1">
           <!-- django -->
           <h1 id="animeTitle"> {{ episode.title }} </h1>
-          <h3 id="animeEpisode"> {{ episode.number }}</h3>
+          <h3 id="animeEpisode"> Episode {{ episode.number }}</h3>
           <div id="preview">
             <img class="previewImg" src= "{{ episode.image.url }}">
+            <span> {{ episode.image.url }} </span>
           </div>
         </div>
         <div class="col-sm-6 row1col2">
@@ -37,9 +38,9 @@
           </div>
         </div>
         <div class="col-sm-6 row2col2">
-          <div id="goBtn" class="float-right">
-            <button type="button" onclick="window.location.href='episode-view.html'"> Go! </button>
-          </div>
+          <button type="button">
+              <a href="{% url 'episode-watch' episode.id %}"> Go! </a>
+            </button>
         </div>
       </div>
     </div>
