@@ -183,6 +183,11 @@ html, body{
   background-color: grey;
 }
 
+.previewImg{
+  height: 50vh;
+  min-width: 30vw;
+}
+
 /*quiz*/
 
 .btns{
