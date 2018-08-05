@@ -1,14 +1,90 @@
-{% extends "watchandlearn/base_generic.html" %}
+<!doctype html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    </head>
+    <body>
+        <style>
+            #popup{
+                position: fixed;
+                top, left: 0;
+                width: 1em;
+                height: 1em;
+                background-color: rgb(253,124,44);
+                border-radius: .2em;
+                z-index: 2147483638;
+                opacity: 0;
+                font-size: 2em;
+                color: white;
+                text-align: center;
+                padding: .1em;
+            }
+            #vid{
+                z-index: 0;
+            }
+            #tip{
+                position:fixed;
+                top, left: 0;
+                width:100%;
+                height: 3em;
+                z-index: 2147483637;
+                background-color: black;
+                color: white;
+                opacity: 0;
+                padding-left: 3em;
+                
+            }
+            #tip span{
+                opacity: 1;
+            }
+        </style>
+        
+        <iframe id="vid" src="https://www.youtube.com/embed/rk7KivEwZVk? &showinfo=0&rel=0&enablejsapi=1" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+        
+        <span id="popup">!</span>
+        <div id="tip"><span>pro tip right here</span></div>
+        
+        <script type="text/javascript">
+            var tag = document.createElement('script');
+            tag.id="iframe";
+            tag.src="https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('vid', {
+                  events: {
+                    'onReady': onPlayerReady
+                  }
+                });
+                
+            }
+            
+            function onPlayerReady(event){
+                event.target.playVideo();
+                function updateTime() {
+                    var videotime = 0;
+                  if(player && player.getCurrentTime) {
+                    videotime = player.getCurrentTime();
 
-{% block content %}
-  {% load static %}
-  <script src="{% static '/watchandlearn/javascript/episode_watch.js' %}"></script>
+                    console.log("time: "+Math.round(videotime));
+                      
+                      if(Math.round(videotime)==206){
+                          $("#popup").css("opacity","1");
+                      }
+                      
+                      $("#popup").click(function(){
+                          $("#tip").css("opacity",".8");
+                      })
+                  }
+                }
+        timeupdater = setInterval(updateTime, 100);
+            }
+    
+            
 
-   <iframe id="vid" src="{{ episode.video }}" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
-
-  <span id="popup">!</span>
-  <div id="tip"><span>pro tip right here</span></div>
-
-{% endblock %}
-           
-
+        </script>
+    </body>
+	
+</html>
