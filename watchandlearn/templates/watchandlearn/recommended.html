@@ -18,7 +18,7 @@
                 <div class = "row">
                     <div  class = "col col-6 anime left">
                         <a href="episodes.html"><img class="rounded img-responsive" src = "https://i.pinimg.com/originals/67/bc/36/67bc36fe4a5ad62a59b03059b58f57a1.jpg"></a>
-                        Pokemon
+                      
                     </div>
                     <div class = "col col-6 anime right">
                         <img class="img-responsive" src = "https://media.nyusu.fm/ranking/option/940/11055.jpg">
@@ -33,6 +33,10 @@
                         <img class='img-responsive' src =  "https://www.animez.uk/ekmps/shops/animez/images/one-piece-poster-luffy-co.-2-1040-p.jpg">
                     </div>
                 </div>
+                
+                {% if series %}
+                    {% for s in series%}
+                        <div class = "category">{{s.Topic}}</div>
                 
             </div>
         </div>
