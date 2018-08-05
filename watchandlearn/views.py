@@ -41,12 +41,10 @@ def recommended(request):
     )
 
 # @login_required
-def episodes(request):
-	return render(
-				request,
-				'watchandlearn/episodes.html',
-				context={},
-			)
+def episodes(request, pk):
+  series = get_object_or_404(Series, pk=pk)
+  episodes = Episode.objects.all().filter(series__pk=pk)
+  return render(request, 'watchandlearn/episodes.html', context={'series': series, "episodes": episodes},)
 
 # @login_required
 def quiz(request, pk):
