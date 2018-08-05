@@ -34,10 +34,11 @@ def assessment(request):
 # @login_required
 def recommended(request):
     series = Series.objects.all()
-    jsonSeries = serialize('json', series)
-    
-    t = TemplateResponse(request, "watchandlearn/recommended.html", {'series':series})
-    return t.render()
+    return render(
+        request, 
+        "watchandlearn/recommended.html", 
+        context={'series':series}
+    )
 
 # @login_required
 def episodes(request):
