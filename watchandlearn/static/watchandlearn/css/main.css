@@ -71,6 +71,7 @@ html, body{
   height: 2em;
   padding: 1em 1em;
   background-color: darkgrey;
+  z-index: 2147483638;
 }
 
 #search{
