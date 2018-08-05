@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'watchandlearn.apps.WatchandlearnConfig',
     'import_export',
     'django_secrets',
-    'Pillow'
 ]
 
 MIDDLEWARE = [
