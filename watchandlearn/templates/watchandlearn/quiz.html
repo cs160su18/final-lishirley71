@@ -62,281 +62,47 @@
           XP
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
+      <form class="choices" action="{% url 'quiz-feedback' 1 %}" method="post">
+        {% csrf_token %}
+        <div class = "row">
+          <div class="col">
+          {% for question in questions %}
+            <div class="row">
+              <div class="col-sm-10 question">
+                <span class="questionNumber">{{ forloop.counter }}. </span> {{ question.question_text }}
+              </div>
+              <div class="col-sm-2 xpVal">
+                {{ question.experience}}
+              </div>
             </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
+            <div class="row">
+              <div class="col-sm-10">          
+                <div>
+                  <input type="radio" name="question{{ forloop.counter }}" value="1"> {{ question.option1 }} </input>
+                </div>
+                <div>
+                  <input type="radio" name="question{{ forloop.counter }}" value="2"> {{ question.option2 }} </input>
+                </div>
+                <div>
+                  <input type="radio" name="question{{ forloop.counter }}" value="3"> {{ question.option3 }} </input>
+                </div>          
+              </div>
             </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
+          {% endfor %}
         </div>
-      </div>
-      <!-- hard code -->
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-10 question">
-          <span class="questionNumber">1</span> What is Akane Tsunemori’s (first girl) job?
-        </div>
-        <div class="col-sm-2 xpVal">
-          50
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-10">
-          <form class="choices">
-            <div>
-            <input type="radio" name="choice" value="Inspector"> Inspector</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="Butcher"> Butcher</input>
-            </div>
-            <div>
-            <input type="radio" name="choice" value="OfficeWorker"> OfficeWorker</input>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- hard code -->
-    </div>
+        </div>  
+      
 
     <div class="container-fluid btns">
       <div class="row">
         <div class="col-sm-6">
-          <button type="button" value='skip' onclick="window.location.href='episodes.html'">Skip</button>
+          <button type="button" value='skip' onclick="window.location.href='{% url 'episodes' %}'">Skip</button>
         </div>
         <div class="col-sm-6">
-          <button type="button" value='submit' class="float-right" onclick="window.location.href='feedback.html'">Submit</button>
+          <input type="submit" value='Submit' class="float-right">
         </div>
+        </form>
+    </div>
       </div>
     </div>
   </body>
