@@ -125,9 +125,9 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'
 
-MEDIA_URL = '/watchandlearn/media/subtitles/'
+MEDIA_URL = '/media/' 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, '/watchandlearn/')
 
 STATICFILES_DIRS = ('/watchandlearn/static/',)
 
