@@ -74,6 +74,9 @@
                           checkPopUp();
                         }
                       {% endfor %}
+                      if(Math.round(videotime) == Math.round(player.getDuration())){
+                        window.location.href="{% url 'quiz' quiz.id %}"
+                      }
                   }
                 }
               timeupdater = setInterval(updateTime, 100);
