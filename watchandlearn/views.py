@@ -26,14 +26,6 @@ def index(request):
 
 @login_required
 def assessment(request):
-  return render(
-      request,
-      'watchandlearn/assessment.html',
-      context={},
-  )
-
-@login_required
-def recommended(request):
   if request.method == 'POST':
       profile = request.user.profile
       voVal = int(request.POST.get('vocabulary'))
@@ -45,8 +37,22 @@ def recommended(request):
       profile.writing = wrVal
       profile.grammar = grVal
       profile.composite = voVal + reVal + wrVal + grVal
+
       profile.level = math.floor(profile.composite/40)
       profile.experience = 0
+<<<<<<< HEAD
+=======
+      #Need to calculate level and experience
+
+  return render(
+      request,
+      'watchandlearn/assessment.html',
+      context={},
+  )
+
+@login_required
+def recommended(request):
+>>>>>>> 62ef1703941412ca178398fba5b0fec012a23421
   series_by_topic = []
   topics = Topic.objects.all()
   for topic in topics:
@@ -239,17 +245,21 @@ def feedback(request, pk):
   if request.method == 'POST':
     quiz = get_object_or_404(Quiz, pk=pk)
     questions = list(Question.objects.all().filter(quiz__pk=pk))
-    answers = []
+    contextDict = {}
+    correct = []
     xp = 0
     print(request.POST)
     for i in range(len(questions)):
       submitted_answer = request.POST.get('question' + str(i+1))
       question = questions[i]
       print(submitted_answer)
-      print(question.answer)
+      print(question.answer-1)
       answers.append(str(question.answer-1) == submitted_answer)
+      contextDict[i+1]=submitted_answer
       if (str(question.answer-1) == submitted_answer):
         xp += question.experience
+    contextDict['questions']=questions
+    contextDict['answers']=answers
     request.user.profile.experience += xp
     print(answers)
-  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers})
+  return render(request, 'watchandlearn/feedback.html', context=contextDict)
