@@ -37,7 +37,6 @@ def recommended(request):
   topics = Topic.objects.all()
   for topic in topics:
     series_by_topic.append((topic, Series.objects.filter(topic=topic)))
-  print(series_by_topic)
   return render(
       request, 
       "watchandlearn/recommended.html", 
@@ -57,10 +56,18 @@ def quiz(request, pk):
   return render( request, 'watchandlearn/quiz.html', context={'quiz': quiz, 'questions': questions},)
 
 def episode_watch(request, pk):
-
     episode = get_object_or_404(Episode, pk=pk)
-    
-    return render(request, 'watchandlearn/episode_watch.html', context={'episode': episode})
+    terms = request.session.get('terms')
+    for term in terms:
+      timestamp = term.timestamp
+      word = term.word
+      definition = term.definition
+
+
+
+
+
+    return render(request, 'watchandlearn/episode_watch.html', context={'episode': episode, 'terms': terms})
 
 
 
@@ -182,6 +189,7 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
       definition = self.find_definition(search_term)
       terms.append({'timestamp': timestamp, 'word': search_term.capitalize(), 'definition': definition})
     context['terms'] = terms
+    self.request.session['terms'] = terms
     return context
     
 @login_required
