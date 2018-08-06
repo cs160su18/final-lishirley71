@@ -233,3 +233,13 @@ html, body{
 .question-choice{
   padding-bottom: 1vh;
 }
+
+#correct{
+    color: green;
+    font-weight: bold;
+}
+
+#incorrect{
+    color: red;
+    font-weight: bold;
+}
