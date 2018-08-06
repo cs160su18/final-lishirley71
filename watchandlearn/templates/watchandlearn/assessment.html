@@ -10,7 +10,7 @@
 
 	<h1 class="ml-3"> Self Assessment </h1>
 
-		<form action="{% url 'assessment' %}" method="post">
+		<form class="choices" action="{% url 'assessment' %}" method="post">
 		{% csrf_token %}
 		<div class="col">
 			<div class="row ml-2 mr-2">
@@ -108,7 +108,7 @@
 
 			    <div class="row ml-5 mt-3">
 			    	<center>
-			      	<button type="button" onclick="window.location.href='{% url 'recommended' %}'">Submit</button>
+							<a href='{% url 'recommended' %}'> <input class="btn btn-classic" type="submit" value='Submit'> </a>
 			    	</center>
 			    </div>
 			</form>
@@ -116,7 +116,7 @@
 	</div>
 	<script>
 
-	document.getElementById("submit").onclick = function() {
+	/*document.getElementById("submit").onclick = function() {
 		var vocab = parseInt(document.getElementById('vocabulary').value);
 		var read = parseInt(document.getElementById('reading').value);
 		var writ = parseInt(document.getElementById('writing').value);
@@ -126,7 +126,7 @@
 		console.log("read " + read);
 		console.log("writ " + writ);
 		console.log("gram " + gram);
-	}
+	}*/
 
 	var sliders = document.getElementsByClassName("slider");
 	console.log(sliders);

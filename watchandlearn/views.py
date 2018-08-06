@@ -31,6 +31,8 @@ def assessment(request):
       reVal = int(request.POST.get('reading'))
       wrVal = int(request.POST.get('writing'))
       grVal = int(request.POST.get('grammar'))
+      print('Does this work')
+      print(voVal)
       profile.vocabulary = voVal
       profile.reading = reVal
       profile.writing = wrVal
@@ -42,7 +44,7 @@ def assessment(request):
       request,
       'watchandlearn/assessment.html',
       context={},
-      )
+  )
 
 @login_required
 def recommended(request):
@@ -76,7 +78,7 @@ def episode_watch(request, pk):
       for match in matches:
         time = match.group(1)
         seconds = match.group(2)
-      # time = 26:49:14 
+      # time = 26:49:14
       time_list = time.split(":")
 
       if(len(time_list) == 1):
