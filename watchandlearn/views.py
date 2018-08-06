@@ -25,11 +25,24 @@ def index(request):
 
 @login_required
 def assessment(request):
+  if request.method == 'POST':
+      profile = request.user.profile
+      voVal = int(request.POST.get('vocabulary'))
+      reVal = int(request.POST.get('reading'))
+      wrVal = int(request.POST.get('writing'))
+      grVal = int(request.POST.get('grammar'))
+      profile.vocabulary = voVal
+      profile.reading = reVal
+      profile.writing = wrVal
+      profile.grammar = grVal
+      profile.composite = voVal + reVal + wrVal + grVal
+      #Need to calculate level and experience
+
   return render(
       request,
       'watchandlearn/assessment.html',
       context={},
-  )
+      )
 
 @login_required
 def recommended(request):
