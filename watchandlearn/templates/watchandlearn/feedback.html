@@ -52,14 +52,12 @@ body, html{
           <div class = "row">
             <div class="col">
               {% for question in questions %}
-                {% with count=forloop.counter %}
                 <fieldset class="question">
                   <legend>
                     {{ forloop.counter }}. {{ question.question_text }}
                   </legend>
                   <div class="row">
                     <div class="col-sm-10">
-                        <p>{{ count }}</p>
                         {% if answers|get_by_index:count %}
                             <span id="correct">Correct!</span>
                         {% else %}
@@ -67,21 +65,20 @@ body, html{
                             Your choice: {{ forloop.counter }}
                         {% endif %}
                       <div class="question-choice">
-                        <input type="radio" name="question{{ forloop.counter }}" value="1"> {{ question.option1 }} </input>
+                        <input type="radio" name="question{{ forloop.counter }}" value="0"> {{ question.option1 }} </input>
                       </div>
 
                       <div class="question-choice">
-                        <input type="radio" name="question{{ forloop.counter }}" value="2"> {{ question.option2 }} </input>
+                        <input type="radio" name="question{{ forloop.counter }}" value="1"> {{ question.option2 }} </input>
                       </div>
 
                       <div class="question-choice">
-                        <input type="radio" name="question{{ forloop.counter }}" value="3"> {{ question.option3 }} </input>
+                        <input type="radio" name="question{{ forloop.counter }}" value="2"> {{ question.option3 }} </input>
                       </div>
 
                     </div>
                   </div>
                 </fieldset>
-                {% endwith %}
               {% endfor %}
             </div>
           </div>  
