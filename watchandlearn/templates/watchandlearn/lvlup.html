@@ -76,7 +76,7 @@
       newavi.innerHTML += "<div class='row justify-content-center align-text-center'><img src='{% static 'watchandlearn/images/avatars/lvl{{ profile.level }}.png' %}'' id='avatar'></div>";
 
       var lvltext = document.getElementById("lvltext");
-      lvltext.innerHTML += "<h1 class='text-center'> LEVEL<br>1</h1>";
+      lvltext.innerHTML += "<h1 class='text-center'> LEVEL<br>{{ profile.level }}</h1>";
     }
 
 
