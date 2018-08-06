@@ -245,3 +245,14 @@ html, body{
     color: red;
     font-weight: bold;
 }
+
+/* Series Carousel */
+.glyphicon-chevron-left:before{
+    content: "\e079";
+    color: orange;
+}
+
+.glyphicon-chevron-right:before {
+    content: "\e080";
+    color: orange;
+}
