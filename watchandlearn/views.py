@@ -13,6 +13,7 @@ from watchandlearn.models import *
 from my_secrets import secrets
 import re, requests, json, urllib
 from django.template import *
+import math
 
 HIGHEST_SCORE = 6
 
@@ -46,7 +47,7 @@ def recommended(request):
       profile.writing = wrVal
       profile.grammar = grVal
       profile.composite = voVal + reVal + wrVal + grVal
-      profile.level = Math.floor(profile.composite/40)
+      profile.level = math.floor(profile.composite/40)
       profile.experience = 0
       #Need to calculate level and experience
   series_by_topic = []
