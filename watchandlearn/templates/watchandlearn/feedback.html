@@ -67,15 +67,15 @@ body, html{
                             Your choice: {{ answers.count }}
                         {% endif %}
                       <div class="question-choice">
-                        <input type="radio" name="question{{ forloop.counter }}" value="0"> {{ question.option1 }} </input>
+                        <input type="radio" name="question{{ forloop.counter }}" value="1"> {{ question.option1 }} </input>
                       </div>
 
                       <div class="question-choice">
-                        <input type="radio" name="question{{ forloop.counter }}" value="1"> {{ question.option2 }} </input>
+                        <input type="radio" name="question{{ forloop.counter }}" value="2"> {{ question.option2 }} </input>
                       </div>
 
                       <div class="question-choice">
-                        <input type="radio" name="question{{ forloop.counter }}" value="2"> {{ question.option3 }} </input>
+                        <input type="radio" name="question{{ forloop.counter }}" value="3"> {{ question.option3 }} </input>
                       </div>
 
                     </div>

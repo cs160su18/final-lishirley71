@@ -246,9 +246,11 @@ def feedback(request, pk):
     for i in range(len(questions)):
       submitted_answer = request.POST.get('question' + str(i+1))
       question = questions[i]
-      answers.append(str(question.answer) == submitted_answer)
-      if (str(question.answer) == submitted_answer):
+      print(submitted_answer)
+      print(question.answer)
+      answers.append(str(question.answer-1) == submitted_answer)
+      if (str(question.answer-1) == submitted_answer):
         xp += question.experience
     request.user.profile.experience += xp
     print(answers)
-  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers},)
+  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers})
