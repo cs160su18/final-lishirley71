@@ -33,14 +33,15 @@ def assessment(request):
 
 @login_required
 def recommended(request):
+  series_by_topic = []
   topics = Topic.objects.all()
-  series = {}
   for topic in topics:
-    series[topic.id] = Series.objects.filter(topic=topic)
+    series_by_topic.append((topic, Series.objects.filter(topic=topic)))
+  print(series_by_topic)
   return render(
       request, 
       "watchandlearn/recommended.html", 
-      context={'series':series, 'topics': topics}
+      context={'topics': topics, 'series_by_topic':series_by_topic}
   )
 
 @login_required

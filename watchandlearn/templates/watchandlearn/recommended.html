@@ -21,9 +21,9 @@
         {% endfor %}
       </ul>
     <br>  
-      {% for topic in topics %}
+      {% for sbt in series_by_topic %}
         <br>
-        <h1 style="margin-top: 80px" id = "{{ topic.title }}"> {{ topic.title }} </h1>
+        <h1 style="margin-top: 80px" id = "{{ sbt.0.title }}"> {{ sbt.0.title }} </h1>
         <br>
         <div id="carousel{{ forloop.counter }}"  class="carousel slide text-center" data-interval="false">
             <!-- Indicators -->
@@ -32,14 +32,17 @@
               <li data-target="#carousel{{ forloop.counter }}" data-slide-to="1"></li>
               <li data-target="#carousel{{ forloop.counter }}" data-slide-to="2"></li>
             </ol>
-            {% for s in series %}
-              <div class="carousel-inner text-center">
-                <div class="item active" style="padding-left: 25%">
-                  <img src="{{ s.image }}" alt="{{ s.title }}" style="width:50%;">
-                </div>
-              </div>
-            {% endfor %}
-           
+            <div class="carousel-inner text-center">
+              {% for series in sbt.1 %}
+                  {% if forloop.first %}
+                     <div class="item active" style="padding-left: 25%">
+                  {% else %}
+                     <div class="item" style="padding-left: 25%">
+                  {% endif %}
+                    <img src="{{ series.image }}" alt="{{ series.title }}" style="height:75vh">
+                  </div>
+              {% endfor %}
+            </div>
 
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#carousel{{ forloop.counter }}" data-slide="prev">
