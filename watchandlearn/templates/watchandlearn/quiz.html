@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <div class="container-fluid quiz">
+  <div class="quiz">
     <form class="choices" action="{% url 'quiz-feedback' quiz.id %}" method="post">
       {% csrf_token %}
       <div class = "row">
@@ -42,17 +42,15 @@
         </div>
       </div>
 
-      <div class="container-fluid btns">
         <div class="row">
-          <div class="col">
+          <div class="col-6">
             <button type="button" class="btn btn-classic" value='skip' onclick="window.location.href='{% url 'recommended' %}'">Skip</button>
           </div>
           
-          <div class="col">
+          <div class="col-6">
             <input class="btn btn-classic" type="submit" value='Submit'>
           </div>
         </div>
-      </div>
     </form>       
   </div>
 

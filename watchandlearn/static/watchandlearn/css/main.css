@@ -220,8 +220,7 @@ html, body{
 
 .choices{
   margin-top:10px;
-  padding-left: 5vw;
-  display: flex;
+  padding: 5vw;
   justify-content: space-between;
 }
 
