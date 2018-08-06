@@ -56,13 +56,35 @@ def quiz(request, pk):
   return render( request, 'watchandlearn/quiz.html', context={'quiz': quiz, 'questions': questions},)
 
 def episode_watch(request, pk):
+    # convert timestamp string into an integer represenation (seconds)
+    def get_seconds(timestamp):
+      regex = r"([\d:]+):(\d\d),\d\d\d -->"
+      matches = re.finditer(regex, timestamp, re.MULTILINE)
+      for match in matches:
+        time = match.group(1)
+        seconds = match.group(2)
+      # time = 26:49:14 
+      time_list = time.split(":")
+
+      if(len(time_list) == 1):
+        return int(time_list[0])
+      else:
+        total = 0
+        for i in range(len(time_list)):
+          t = int(time_list[i])
+          total += t
+          total *= 60
+        total+=int(seconds)
+        return total
+
     episode = get_object_or_404(Episode, pk=pk)
     terms = request.session.get('terms')
-    # for term in terms:
-      # timestamp = term.timestamp
-      # word = term.word
-      # definition = term.definition
-
+    for term in terms:
+      timestamp = term.get('timestamp')
+      word = term.get('word')
+      definition = term.get('definition')
+      time = get_seconds(timestamp)
+      print(timestamp," : ", time)
 
 
 
