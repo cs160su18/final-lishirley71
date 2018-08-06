@@ -202,7 +202,7 @@ def feedback(request, pk):
     i=1
     for i in range(len(questions)):
       submitted_answer = request.POST.get('question' + str(i))
-        print(submitted_answer)
+      print(submitted_answer)
       question = questions[i]
       answers.append(str(question.answer) == submitted_answer)
     print(answers)
