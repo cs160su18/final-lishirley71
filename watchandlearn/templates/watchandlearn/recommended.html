@@ -1,64 +1,69 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href="../../static/watchandlearn/css/main.css" />
-  </head>
-  <body>
-    <div>
-        <div class = "topBar">
-            <input id="search" type="text" name="fname">
-        </div>  
-        <div class="contents">
-            <div class="row">
-                <div class = "category">Action</div>
+{% extends "watchandlearn/base_generic.html" %}
+
+{% block content %}
+    {% load static %}
+    
+    <script src="{% static '/watchandlearn/javascript/episodes.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static '/watchandlearn/css/episodes.css' %}" />
+    
+    <div class = "container">
+      <div class = "topBar">
+         
+      </div>
+<br>  
+      {% for topic in topics %}
+        <br>
+        <h1> {{ topic.title }} </h1>
+        <br>  
+        <div id="carousel{{ forloop.counter }}" class="carousel slide text-center" data-interval="false">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel{{ forloop.counter }}" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel{{ forloop.counter }}" data-slide-to="1"></li>
+              <li data-target="#carousel{{ forloop.counter }}" data-slide-to="2"></li>
+            </ol>
+              
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner text-center">
+              <div class="item active" style="padding-left: 25%">
+                <img src="https://i.pinimg.com/originals/67/bc/36/67bc36fe4a5ad62a59b03059b58f57a1.jpg" alt="Pokemon" style="width:50%;">
+              </div>
+
+              <div class="item" style="padding-left: 25%">
+                <img src="https://media.nyusu.fm/ranking/option/940/11055.jpg" alt="K-ON" style="width:50%;">
+              </div>
+
+              <div class="item" style="padding-left: 25%">
+                <img src="https://img.etsystatic.com/il/d4bdc1/1266183999/il_570xN.1266183999_dz6q.jpg?version=0" alt="Naruto" style="width:50%;">
+              </div>
             </div>
-            <div class = "container">
-                <div class = "row">
-                    <div  class = "col col-6 anime left">
-                        <a href="episodes.html"><img class="rounded img-responsive" src = "https://i.pinimg.com/originals/67/bc/36/67bc36fe4a5ad62a59b03059b58f57a1.jpg"></a>
-                      
-                    </div>
-                    <div class = "col col-6 anime right">
-                        <img class="img-responsive" src = "https://media.nyusu.fm/ranking/option/940/11055.jpg">
-                    </div>
-                </div>
-                <div class = "category">Adventure</div>
-                <div class="row">
-                    <div class = "col col-6 anime left">
-                       <img class="img-responsive" src =  "https://img.etsystatic.com/il/d4bdc1/1266183999/il_570xN.1266183999_dz6q.jpg?version=0">
-                    </div>
-                    <div class = "col col-6 anime right">
-                        <img class='img-responsive' src =  "https://www.animez.uk/ekmps/shops/animez/images/one-piece-poster-luffy-co.-2-1040-p.jpg">
-                    </div>
-                </div>
-                {{series}}
-            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#carousel{{ forloop.counter }}" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel{{ forloop.counter }}" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
         </div>
+        <br>
+      {% endfor %}
+
     </div>
-      
+    
     <script>
         function addSeries(series){
-            var topic = document.getElementById(series['fields']["topic"])
-            if(topic){
-               topic.append("<div class='col col-4'><img class='img-responsive' src='"+series['fields']['image']+"'></div>") 
+            if(Document.getElementById(series.topic)){
+               $('contents').append("<div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div>") 
             }else{
-                $('.contents').append("<div class='row' id='"+series['fields']['topic']+"'><div class='col col-4'><img class='img-responsive' src='"+series['fields']['image']+"'></div></div>") 
+                $('contents').append("<div class='row' id='"+series.topic+"'><div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div></div>") 
             }
         }
-        var series = {{ series|safe }};
-        //console.log(series);
-        //console.log(series[0]);
-        //console.log(series[0]["fields"]["topic"]['title']);
-        
-        for (s in series){
-            console.log(series[s])
-            addSeries(series[s]);
-        }
-        
+        var s = JSON.parse('{{ series|safe }}');
+        console.log(s[1].topic);
       </script>
-         
-  </body>
-</html>
+
+{% endblock %}
+      
