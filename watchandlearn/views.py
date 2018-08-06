@@ -13,6 +13,7 @@ from watchandlearn.models import *
 from my_secrets import secrets
 import re, requests, json, urllib
 from django.template import *
+import math
 
 HIGHEST_SCORE = 6
 
@@ -25,21 +26,6 @@ def index(request):
 
 @login_required
 def assessment(request):
-  if request.method == 'POST':
-      profile = request.user.profile
-      voVal = int(request.POST.get('vocabulary'))
-      reVal = int(request.POST.get('reading'))
-      wrVal = int(request.POST.get('writing'))
-      grVal = int(request.POST.get('grammar'))
-      print('Does this work')
-      print(voVal)
-      profile.vocabulary = voVal
-      profile.reading = reVal
-      profile.writing = wrVal
-      profile.grammar = grVal
-      profile.composite = voVal + reVal + wrVal + grVal
-      #Need to calculate level and experience
-
   return render(
       request,
       'watchandlearn/assessment.html',
@@ -48,6 +34,19 @@ def assessment(request):
 
 @login_required
 def recommended(request):
+  if request.method == 'POST':
+      profile = request.user.profile
+      voVal = int(request.POST.get('vocabulary'))
+      reVal = int(request.POST.get('reading'))
+      wrVal = int(request.POST.get('writing'))
+      grVal = int(request.POST.get('grammar'))
+      profile.vocabulary = voVal
+      profile.reading = reVal
+      profile.writing = wrVal
+      profile.grammar = grVal
+      profile.composite = voVal + reVal + wrVal + grVal
+      profile.level = math.floor(profile.composite/40)
+      profile.experience = 0
   series_by_topic = []
   topics = Topic.objects.all()
   for topic in topics:
