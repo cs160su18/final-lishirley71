@@ -196,6 +196,7 @@ def lvlup(request):
 @login_required
 def feedback(request, pk):
   if request.method == 'POST':
+    print("if")
     quiz = get_object_or_404(Quiz, pk=pk)
     questions = list(Question.objects.all().filter(quiz__pk=pk))
     answers = []
