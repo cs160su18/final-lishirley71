@@ -52,17 +52,18 @@ body, html{
           <div class = "row">
             <div class="col">
               {% for question in questions %}
+                {% with count=forloop.counter %}
                 <fieldset class="question">
                   <legend>
                     {{ forloop.counter }}. {{ question.question_text }}
                   </legend>
                   <div class="row">
                     <div class="col-sm-10">
-                        {% if answers.forloop.counter %}
+                        {% if answers.count %}
                             <span id="correct">Correct!</span>
                         {% else %}
                             <span id="incorrect">Incorrect.</span> The correct answer is {{ question.answer }} <br>
-                            Your choice: {{ answers.forloop.counter }}
+                            Your choice: {{ answers.count }}
                         {% endif %}
                       <div class="question-choice">
                         <input type="radio" name="question{{ forloop.counter }}" value="0"> {{ question.option1 }} </input>
