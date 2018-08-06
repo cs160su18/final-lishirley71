@@ -51,7 +51,7 @@ def episodes(request, pk):
 def quiz(request, pk):
   quiz = get_object_or_404(Quiz, pk=pk)
   questions = Question.objects.all().filter(quiz__pk=pk)
-  return render( request, 'watchandlearn/quiz.html', context={'questions': questions},)
+  return render( request, 'watchandlearn/quiz.html', context={'quiz': quiz, 'questions': questions},)
 
 def episode_watch(request, pk):
 

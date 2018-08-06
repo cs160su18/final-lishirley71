@@ -11,7 +11,7 @@
   </div>
 
   <div class="container-fluid quiz">
-    <form class="choices" action="{% url 'quiz-feedback' 1 %}" method="post">
+    <form class="choices" action="{% url 'quiz-feedback' quiz.id %}" method="post">
       {% csrf_token %}
       <div class = "row">
         <div class="col">
