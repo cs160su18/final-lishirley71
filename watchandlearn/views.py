@@ -170,20 +170,13 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
         return timestamp
     return 'Not Found'
 
-  # use WordAPI to find definitions for search_term
+  # use OwlAPI to find definitions for search_term
   def find_definition(self, search_term):
-    app_id = secrets.OXFORD_ID
-    app_key = secrets.OXFORD_KEY
+    url = 'https://owlbot.info/api/v2/dictionary/' + search_term
 
-    language = 'en'
-    search_term = search_term.replace(" ", "_")
-    word_id = urllib.parse.quote_plus(search_term)
+    r = requests.get(url).json()
+    return r[0]['definition'] 
 
-    url = 'https://od-api.oxforddictionaries.com:443/api/v1/entries/' + language + '/' + word_id.lower()
-
-    r = requests.get(url, headers = {'app_id': app_id, 'app_key': app_key}).json()
-    defn = r['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['definitions'][0]
-    return defn
 
   def get_context_data(self, **kwargs):
 
