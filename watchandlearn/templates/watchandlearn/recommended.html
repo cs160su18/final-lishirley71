@@ -32,7 +32,7 @@
                   {% else %}
                      <div class="item" style="padding-left: 25%">
                   {% endif %}
-                    <img src="{{ series.image }}" alt="{{ series.title }}" style="height:75vh">
+                    <a href="{% url 'episodes' series.id %}"> <img src="{{ series.image }}" alt="{{ series.title }}" style="height:75vh"> </a>
                   </div>
               {% endfor %}
             </div>
