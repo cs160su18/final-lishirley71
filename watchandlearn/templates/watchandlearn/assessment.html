@@ -4,7 +4,7 @@
 
 	{% load static %}
 
-	<script src="{% static '/watchandlearn/javascript/assessment.js' %}"></script>
+<!-- 	<script src="{% static '/watchandlearn/javascript/assessment.js' %}"> --></script>
 	<style>
 	</style>
 
@@ -106,11 +106,23 @@
 
 			    <div class="row ml-5 mt-3">
 			    	<center>
-			      	<button type="submit">Submit</button>
+			      	<button id="submit" type="submit">Submit</button>
 			    	</center>
 			    </div>
 		</fieldset>
 
 	</div>
+	<script>
+
+	document.getElementById("submit").onclick = function() {
+		var vocab = document.getElementById('vocabulary').value;
+		var read = document.getElementById('reading').value;
+		var writ = document.getElementById('writing').value;
+		var gram = document.getElementById('grammar').value;
+		var composite = parseInt(vocab) + parseInt(read) + parseInt(writ) + parseInt(gram);
+
+	}
+
+	</script>
 
 {% endblock %}
