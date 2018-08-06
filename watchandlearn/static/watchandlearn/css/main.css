@@ -210,8 +210,7 @@ html, body{
 }
 
 .question{
-  padding-left: 5vw;
-  margin-top:10px;
+  padding: 2vw 5vw;
 }
 
 .questionNumber{
@@ -220,8 +219,7 @@ html, body{
 
 .choices{
   margin-top:10px;
-  padding-left: 5vw;
-  display: flex;
+  padding: 5vw;
   justify-content: space-between;
 }
 

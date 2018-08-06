@@ -21,7 +21,7 @@ def index(request):
         request,
         'watchandlearn/index.html',
         context={},
-    ) 
+    )
 
 @login_required
 def assessment(request):
@@ -29,7 +29,7 @@ def assessment(request):
       request,
       'watchandlearn/assessment.html',
       context={},
-  ) 
+  )
 
 @login_required
 def recommended(request):
@@ -38,8 +38,8 @@ def recommended(request):
   for topic in topics:
     series_by_topic.append((topic, Series.objects.filter(topic=topic)))
   return render(
-      request, 
-      "watchandlearn/recommended.html", 
+      request,
+      "watchandlearn/recommended.html",
       context={'topics': topics, 'series_by_topic':series_by_topic}
   )
 
@@ -58,10 +58,10 @@ def quiz(request, pk):
 def episode_watch(request, pk):
     episode = get_object_or_404(Episode, pk=pk)
     terms = request.session.get('terms')
-    for term in terms:
-      timestamp = term.timestamp
-      word = term.word
-      definition = term.definition
+    # for term in terms:
+      # timestamp = term.timestamp
+      # word = term.word
+      # definition = term.definition
 
 
 
@@ -101,7 +101,7 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
 
     # split into a set of unique words, delimited by spaces
     return set(caption.split(" "))
-  
+
   # find timestamp where search_term was said
   def find_timestamp(self, arr, search_term):
     line = 1
@@ -152,20 +152,20 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
     return defn
 
   def get_context_data(self, **kwargs):
-    
+
     # context is a dict of info available in the view
     context = super(EpisodeDetailView, self).get_context_data(**kwargs)
-    
+
     # list of vocab to eventually put into the context dict
     vocab_list = []
-    
-    # selected episode 
+
+    # selected episode
     episode = context['episode']
-    
+
     # compare words to user's vocab score
     u = self.request.user.profile
     vocab = u.vocabulary
-    
+
     # create list of unique words
     script_list = self.strip_captions(episode.subtitle)
     for diff_lvl in reversed(self.irange(vocab, HIGHEST_SCORE)):
@@ -191,7 +191,7 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
     context['terms'] = terms
     self.request.session['terms'] = terms
     return context
-    
+
 @login_required
 def lvlup(request):
     profile = request.user.profile
@@ -204,7 +204,6 @@ def lvlup(request):
 @login_required
 def feedback(request, pk):
   if request.method == 'POST':
-    print("if")
     quiz = get_object_or_404(Quiz, pk=pk)
     questions = list(Question.objects.all().filter(quiz__pk=pk))
     answers = []
@@ -215,5 +214,3 @@ def feedback(request, pk):
       answers.append(str(question.answer) == submitted_answer)
     print(answers)
   return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers},)
-
-
