@@ -11,8 +11,17 @@ class Profile(models.Model):
 	writing = models.IntegerField(default=0)
 	grammar = models.IntegerField(default=0)
 	composite = models.IntegerField(default=0)
-	level = models.IntegerField(default=1)
-	experience = models.IntegerField(default=0)
+	level1 = models.CharField(max_length=100)
+	level2 = models.CharField(max_length=100)
+	level3 = models.CharField(max_length=100)
+	level4 = models.CharField(max_length=100)
+	level5 = models.CharField(max_length=100)
+	level6 = models.CharField(max_length=100)
+	level7 = models.CharField(max_length=100)
+	level8 = models.CharField(max_length=100)
+	level9 = models.CharField(max_length=100)
+	level10 = models.CharField(max_length=100)
+	experience = models.CharField(default=0)
 
 	def __str__(self):
 		return self.user.username
