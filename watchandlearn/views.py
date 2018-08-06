@@ -13,6 +13,7 @@ from watchandlearn.models import *
 from my_secrets import secrets
 import re, requests, json, urllib
 from django.template import *
+import math
 
 HIGHEST_SCORE = 6
 
@@ -25,21 +26,6 @@ def index(request):
 
 @login_required
 def assessment(request):
-  if request.method == 'POST':
-      profile = request.user.profile
-      voVal = int(request.POST.get('vocabulary'))
-      reVal = int(request.POST.get('reading'))
-      wrVal = int(request.POST.get('writing'))
-      grVal = int(request.POST.get('grammar'))
-      print('Does this work')
-      print(voVal)
-      profile.vocabulary = voVal
-      profile.reading = reVal
-      profile.writing = wrVal
-      profile.grammar = grVal
-      profile.composite = voVal + reVal + wrVal + grVal
-      #Need to calculate level and experience
-
   return render(
       request,
       'watchandlearn/assessment.html',
@@ -48,6 +34,20 @@ def assessment(request):
 
 @login_required
 def recommended(request):
+  if request.method == 'POST':
+      profile = request.user.profile
+      voVal = int(request.POST.get('vocabulary'))
+      reVal = int(request.POST.get('reading'))
+      wrVal = int(request.POST.get('writing'))
+      grVal = int(request.POST.get('grammar'))
+      profile.vocabulary = voVal
+      profile.reading = reVal
+      profile.writing = wrVal
+      profile.grammar = grVal
+      profile.composite = voVal + reVal + wrVal + grVal
+      profile.level = math.floor(profile.composite/40)
+      profile.experience = 0
+      profile.save()
   series_by_topic = []
   topics = Topic.objects.all()
   for topic in topics:
@@ -170,20 +170,13 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
         return timestamp
     return 'Not Found'
 
-  # use WordAPI to find definitions for search_term
+  # use OwlAPI to find definitions for search_term
   def find_definition(self, search_term):
-    app_id = secrets.OXFORD_ID
-    app_key = secrets.OXFORD_KEY
+    url = 'https://owlbot.info/api/v2/dictionary/' + search_term
 
-    language = 'en'
-    search_term = search_term.replace(" ", "_")
-    word_id = urllib.parse.quote_plus(search_term)
+    r = requests.get(url).json()
+    return r[0]['definition'] 
 
-    url = 'https://od-api.oxforddictionaries.com:443/api/v1/entries/' + language + '/' + word_id.lower()
-
-    r = requests.get(url, headers = {'app_id': app_id, 'app_key': app_key}).json()
-    defn = r['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['definitions'][0]
-    return defn
 
   def get_context_data(self, **kwargs):
 
@@ -241,14 +234,18 @@ def feedback(request, pk):
     quiz = get_object_or_404(Quiz, pk=pk)
     questions = list(Question.objects.all().filter(quiz__pk=pk))
     answers = []
+    submissions = []
     xp = 0
     print(request.POST)
     for i in range(len(questions)):
       submitted_answer = request.POST.get('question' + str(i+1))
+      submissions.append(submitted_answer)
       question = questions[i]
-      answers.append(str(question.answer) == submitted_answer)
-      if (str(question.answer) == submitted_answer):
+      print(submitted_answer)
+      print(question.answer)
+      answers.append(str(question.answer-1) == submitted_answer)
+      if (str(question.answer-1) == submitted_answer):
         xp += question.experience
     request.user.profile.experience += xp
     print(answers)
-  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers},)
+  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers, "submissions":submissions})
