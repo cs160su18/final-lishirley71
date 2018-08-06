@@ -48,11 +48,47 @@ body, html{
 
 <div class="container">
       <div class = "left half">
-      <br>Left<br>Left<br>Left<br>Left<br>Left<br>Left<br>Left<br>Left
-      <br>Left<br>Left<br>Left<br>Left<br>Left<br>Left<br>Left<br>Left
-      <br>Left<br>Left<br>Left<br>Left<br>Left<br>Left<br>Left<br>Left
-      <br>Left<br>Left<br>Left<br>Left<br>Left<br>Left<br>Left<br>Left
+      <div class="container-fluid quiz">
+          <div class = "row">
+            <div class="col">
+              {% for question in questions %}
+                {% with count=forloop.counter %}
+                <fieldset class="question">
+                  <legend>
+                    {{ forloop.counter }}. {{ question.question_text }}
+                  </legend>
+                  <div class="row">
+                    <div class="col-sm-10">
+                        <p>{{ count }}</p>
+                        {% if answers.count %}
+                            <span id="correct">Correct!</span>
+                        {% else %}
+                            <span id="incorrect">Incorrect.</span> The correct answer is {{ question.answer }} <br>
+                            Your choice: {{ answers.count }}
+                        {% endif %}
+                      <div class="question-choice">
+                        <input type="radio" name="question{{ forloop.counter }}" value="0"> {{ question.option1 }} </input>
+                      </div>
+
+                      <div class="question-choice">
+                        <input type="radio" name="question{{ forloop.counter }}" value="1"> {{ question.option2 }} </input>
+                      </div>
+
+                      <div class="question-choice">
+                        <input type="radio" name="question{{ forloop.counter }}" value="2"> {{ question.option3 }} </input>
+                      </div>
+
+                    </div>
+                  </div>
+                </fieldset>
+                {% endwith %}
+              {% endfor %}
+            </div>
+          </div>  
+      </div>
       </div> 
+
+
 
       <div class = "right half">
         <div class="col justify-contents-center align-self-center" id="newavi"></div>
@@ -66,14 +102,17 @@ body, html{
             </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>  
-  </div>
+      
+</div>
 
 <script type="text/javascript">
   window.onload = function() {
       var newavi = document.getElementById("newavi");
       newavi.innerHTML += "<div class='row justify-content-center align-text-center'><img src='{% static 'watchandlearn/images/avatars/lvl{{ profile.level }}.png' %}'' id='avatar'></div>";
+  
+      console.log({{ answers }});
   }
 </script>
 

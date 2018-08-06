@@ -50,7 +50,6 @@ def recommended(request):
   topics = Topic.objects.all()
   for topic in topics:
     series_by_topic.append((topic, Series.objects.filter(topic=topic)))
-  print(series_by_topic)
   return render(
       request,
       "watchandlearn/recommended.html",
@@ -70,10 +69,18 @@ def quiz(request, pk):
   return render( request, 'watchandlearn/quiz.html', context={'quiz': quiz, 'questions': questions},)
 
 def episode_watch(request, pk):
-
     episode = get_object_or_404(Episode, pk=pk)
+    terms = request.session.get('terms')
+    # for term in terms:
+      # timestamp = term.timestamp
+      # word = term.word
+      # definition = term.definition
 
-    return render(request, 'watchandlearn/episode_watch.html', context={'episode': episode})
+
+
+
+
+    return render(request, 'watchandlearn/episode_watch.html', context={'episode': episode, 'terms': terms})
 
 
 
@@ -195,6 +202,7 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
       definition = self.find_definition(search_term)
       terms.append({'timestamp': timestamp, 'word': search_term.capitalize(), 'definition': definition})
     context['terms'] = terms
+    self.request.session['terms'] = terms
     return context
 
 @login_required
@@ -212,10 +220,14 @@ def feedback(request, pk):
     quiz = get_object_or_404(Quiz, pk=pk)
     questions = list(Question.objects.all().filter(quiz__pk=pk))
     answers = []
+    xp = 0
     print(request.POST)
     for i in range(len(questions)):
       submitted_answer = request.POST.get('question' + str(i+1))
       question = questions[i]
       answers.append(str(question.answer) == submitted_answer)
+      if (str(question.answer) == submitted_answer):
+        xp += question.experience
+    request.user.profile.experience += xp
     print(answers)
   return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers},)
