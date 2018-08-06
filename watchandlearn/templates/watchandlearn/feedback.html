@@ -21,7 +21,7 @@
               </legend>
               <div class="row">
                 <div class="col-sm-10">
-                    {% if answers.{{ forloop.counter }} %}
+                    {% if {{ forloop.counter }}. answers %}
                         Correct!
                     {% else %}
                         Incorrect. The correct answer is
@@ -41,7 +41,6 @@
                 </div>
               </div>
             </fieldset>
-            {% endfor %}
           {% endfor %}
         </div>
       </div>  
