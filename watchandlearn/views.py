@@ -196,13 +196,13 @@ def lvlup(request):
 @login_required
 def feedback(request, pk):
   if request.method == 'POST':
+    print("if")
     quiz = get_object_or_404(Quiz, pk=pk)
     questions = list(Question.objects.all().filter(quiz__pk=pk))
     answers = []
     print(request.POST)
     for i in range(len(questions)):
       submitted_answer = request.POST.get('question' + str(i+1))
-      print(i+1, submitted_answer)
       question = questions[i]
       answers.append(str(question.answer) == submitted_answer)
     print(answers)
