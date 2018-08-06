@@ -115,11 +115,11 @@
 	<script>
 
 	document.getElementById("submit").onclick = function() {
-		var vocab = document.getElementById('vocabulary').value;
-		var read = document.getElementById('reading').value;
-		var writ = document.getElementById('writing').value;
-		var gram = document.getElementById('grammar').value;
-		var composite = parseInt(vocab) + parseInt(read) + parseInt(writ) + parseInt(gram);
+		var vocab = parseInt(document.getElementById('vocabulary').value);
+		var read = parseInt(document.getElementById('reading').value);
+		var writ = parseInt(document.getElementById('writing').value);
+		var gram = parseInt(document.getElementById('grammar').value);
+		var composite = vocab + read + writ + gram;
 
 	}
 
