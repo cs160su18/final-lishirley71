@@ -16,10 +16,12 @@
                     {% for episode in episodes %}
                         <div class = "column">
                             <a href="{% url 'episode-detail' episode.id %}">
-                                <div class = "col-6 ep" style="width:100%">
-                                    <div class="area">
-                                        <span><h1>EP {{ forloop.counter }}</h1></span>
-                                    </div>
+                                <div class="row">
+                                    <img src="{{ episode.image }}" style="width: 200px; height: auto;">
+                                    </img>
+                                </div>
+                                <div class="row text-center">
+                                    <span style="padding-left: 80px"><h3>EP {{ forloop.counter }}</h3></span>
                                 </div>
                             </a>
                         </div>
