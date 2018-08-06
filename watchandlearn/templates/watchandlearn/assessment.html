@@ -10,34 +10,34 @@
 
 	<h1 class="ml-3"> Self Assessment </h1>
 
-		<form class="choices" action="{% url 'recommended' %}" method="post">
+		<form class="choices" action="{% url 'assessment' %}" method="post">
 		{% csrf_token %}
 		<div class="col">
 			<div class="row ml-2 mr-2">
 				<div class="slidecontainer">
 					<p class="assessment-category-title">Vocabulary: <span id="vocabText"></span></p>
-			  		<input type="range" min="1" max="100" value="50" class="slider" name="vocabulary">
+			  		<input type="range" min="1" max="100" value="50" class="slider" name="vocabulary" onchange="updateInput(this.value, 'vocabText');">
 				</div>
 			</div>
 
 			<div class="row ml-2 mr-2">
 				<div class="slidecontainer">
 					<p class="assessment-category-title">Reading: <span id="readingText"></span></p>
-			  		<input type="range" min="1" max="100" value="50" class="slider" name="reading">
+			  		<input type="range" min="1" max="100" value="50" class="slider" name="reading" onchange="updateInput(this.value, 'readingText');">
 				</div>
 			</div>
 
 			<div class="row ml-2 mr-2">
 				<div class="slidecontainer">
 					<p class="assessment-category-title">Writing: <span id="writingText"></span></p>
-			  		<input type="range" min="1" max="100" value="50" class="slider" name="writing">
+			  		<input type="range" min="1" max="100" value="50" class="slider" name="writing" onchange="updateInput(this.value, 'writingText');">
 				</div>
 			</div>
 
 			<div class="row ml-2 mr-2">
 				<div class="slidecontainer">
 					<p class="assessment-category-title">Grammar: <span id="grammarText"></span></p>
-			  		<input type="range" min="1" max="100" value="50" class="slider" name="grammar">
+			  		<input type="range" min="1" max="100" value="50" class="slider" name="grammar" onchange="updateInput(this.value, 'grammarText');">
 				</div>
 			</div>
 
@@ -108,7 +108,7 @@
 
 			    <div class="row ml-5 mt-3">
 			    	<center>
-							 <input class="btn btn-classic" type="submit" value='Submit'>
+							<a href='{% url 'recommended' %}'> <input class="btn btn-classic" type="submit" value='Submit'> </a>
 			    	</center>
 			    </div>
 			</form>
@@ -116,17 +116,9 @@
 	</div>
 	<script>
 
-	/*document.getElementById("submit").onclick = function() {
-		var vocab = parseInt(document.getElementById('vocabulary').value);
-		var read = parseInt(document.getElementById('reading').value);
-		var writ = parseInt(document.getElementById('writing').value);
-		var gram = parseInt(document.getElementById('grammar').value);
-		var composite = vocab + read + writ + gram;
-		console.log("vocab " + vocab);
-		console.log("read " + read);
-		console.log("writ " + writ);
-		console.log("gram " + gram);
-	}*/
+	function updateInput(val,text) {
+	   document.getElementById(text).innerHTML =val; 
+	}
 
 	var sliders = document.getElementsByClassName("slider");
 	console.log(sliders);
