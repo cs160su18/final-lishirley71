@@ -71,19 +71,14 @@
                     videotime = player.getCurrentTime();
 
                     console.log("time: "+Math.round(videotime));
-<<<<<<< HEAD
 
                       if(Math.round(videotime)==206){
                           popUpStatus = true;
-=======
-                      
-                      if(Math.round(videotime)==20){
->>>>>>> 13f84305c8d4b904c9bc7f7e4d8cb13580e2b0a9
                           $("#popup").css("opacity","1");
                           checkPopUp();
                       }
-                  }
                 }
+              }
               timeupdater = setInterval(updateTime, 100);
 
               $("#popup").click(function(){
