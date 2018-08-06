@@ -46,6 +46,8 @@ def recommended(request):
       profile.writing = wrVal
       profile.grammar = grVal
       profile.composite = voVal + reVal + wrVal + grVal
+      profile.level = Math.floor(profile.composite/40)
+      profile.experience = 0
       #Need to calculate level and experience
   series_by_topic = []
   topics = Topic.objects.all()
