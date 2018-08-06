@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -36,8 +38,7 @@
     </div>
 
     <div class="col justify-contents-center align-self-center">
-      <div class="col justify-content-center">
-        <img src="file:///Users/marinellabohol/Desktop/pikachu.png" class="align-self-center" id="avatar">
+      <div class="col justify-contents-center align-self-center" id="newavi">
       </div>
       <br> 
       <br>
@@ -54,9 +55,8 @@
     </div>
     </div>
 
-    <div class="col  align-self-center">
-      <h1 class="text-center"> LEVEL
-      <br> 9 </h1>
+    <div class="col  align-self-center" id="lvltext">
+      
     </div>
   </div>
 
@@ -66,9 +66,19 @@
     <p> Next Episode <img src="{% static 'watchandlearn/images/play.png' %}" height="20" width="20"></p>
   </div>
 </div>
-
 </body>
-<script>
-   
+
+
+
+<script type="text/javascript">
+    window.onload = function() {
+      var newavi = document.getElementById("newavi");
+      newavi.innerHTML += "<div class='row justify-content-center align-text-center'><img src='{% static 'watchandlearn/images/avatars/lvl{{ profile.level }}.png' %}'' id='avatar'></div>";
+
+      var lvltext = document.getElementById("lvltext");
+      lvltext.innerHTML += "<h1 class='text-center'> LEVEL<br>1</h1>";
+    }
+
+
 </script>
 </html>
