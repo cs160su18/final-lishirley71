@@ -47,6 +47,7 @@ def recommended(request):
       profile.composite = voVal + reVal + wrVal + grVal
       profile.level = math.floor(profile.composite/40)
       profile.experience = 0
+      profile.save()
   series_by_topic = []
   topics = Topic.objects.all()
   for topic in topics:
