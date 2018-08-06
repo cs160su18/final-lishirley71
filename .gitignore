@@ -86,9 +86,7 @@ __pycache__/
 local_settings.py
 
 .env
-db.sqlite3
 watchandlearn/static/watchandlearn/images/episodes/goodbyeattheendofsummer_xGEGb3g.jpg
 watchandlearn/static/watchandlearn/images/episodes/goodbyeattheendofsummer_LwZPrny.jpg
 media/watchandlearn/static/watchandlearn/images/episodes/goodbyeattheendofsummer.jpg
 media/python.png
-db.sqlite3
