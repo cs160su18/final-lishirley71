@@ -230,7 +230,7 @@ def lvlup(request):
     return render(
         request,
         'watchandlearn/lvlup.html',
-        context={'profile': profile: 'imgs': imgs},
+        context={'profile': profile; 'imgs': imgs},
       )
 
 @login_required
