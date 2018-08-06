@@ -1,21 +1,31 @@
 {% extends "watchandlearn/base_generic.html" %}
 
 {% block content %}
-    {% load static %}
+    <style>
+      .panel-side { 
+        width: 100vw; 
+        /* height: 100%; replaced with bottom: 0*/ 
+        top: 0; 
+        bottom: 0;
+        padding:10px;
+        z-index: 1000; 
+        overflow-y: auto; 
+      }
+    </style>
     
-    <script src="{% static '/watchandlearn/javascript/episodes.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static '/watchandlearn/css/episodes.css' %}" />
-    
-    <div class = "container">
-      <div class = "topBar">
-         
-      </div>
-<br>  
+    <div class = "container panel-side">
+      <br>
+      <ul class="pagination" style="position: fixed; bottom: 0">
+        {% for topic in topics %}
+          <li><a href="#{{ topic.title }}">{{ forloop.counter }}</a></li>
+        {% endfor %}
+      </ul>
+    <br>  
       {% for topic in topics %}
         <br>
-        <h1> {{ topic.title }} </h1>
-        <br>  
-        <div id="carousel{{ forloop.counter }}" class="carousel slide text-center" data-interval="false">
+        <h1 style="margin-top: 80px" id = "{{ topic.title }}"> {{ topic.title }} </h1>
+        <br>
+        <div id="carousel{{ forloop.counter }}"  class="carousel slide text-center" data-interval="false">
             <!-- Indicators -->
             <ol class="carousel-indicators">
               <li data-target="#carousel{{ forloop.counter }}" data-slide-to="0" class="active"></li>
@@ -48,22 +58,11 @@
               <span class="sr-only">Next</span>
             </a>
         </div>
-        <br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       {% endfor %}
 
+
     </div>
-    
-    <script>
-        function addSeries(series){
-            if(Document.getElementById(series.topic)){
-               $('contents').append("<div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div>") 
-            }else{
-                $('contents').append("<div class='row' id='"+series.topic+"'><div class='col col-4'><img class='img-responsive' src='"+series.image+"'></div></div>") 
-            }
-        }
-        var s = JSON.parse('{{ series|safe }}');
-        console.log(s[1].topic);
-      </script>
 
 {% endblock %}
-      
+
