@@ -24,7 +24,7 @@
                     {% if answers.forloop.counter %}
                         Correct!
                     {% else %}
-                        Incorrect. The correct answer is {{ question }}.option{{ question.answer }}
+                        Incorrect. The correct answer is {{ question.option|add:question.answer }}
                     {% endif %}
                   <div class="question-choice">
                     <input type="radio" name="question{{ forloop.counter }}" value="1"> {{ question.option1 }} </input>
