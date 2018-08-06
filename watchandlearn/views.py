@@ -39,11 +39,9 @@ def assessment(request):
       profile.writing = wrVal
       profile.grammar = grVal
       profile.composite = voVal + reVal + wrVal + grVal
-<<<<<<< HEAD
-=======
+
       profile.level = math.floor(profile.composite/40)
       profile.experience = 0
->>>>>>> ecc95e640e2344790088c56ee465b119db880f85
       #Need to calculate level and experience
 
   return render(
