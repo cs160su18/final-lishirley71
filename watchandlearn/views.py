@@ -175,7 +175,7 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
     url = 'https://owlbot.info/api/v2/dictionary/' + search_term
 
     r = requests.get(url).json()
-    return r[0]['definition'] 
+    return r[0]['definition']
 
 
   def get_context_data(self, **kwargs):
