@@ -185,11 +185,12 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
     
 @login_required
 def lvlup(request):
-	return render(
-				request,
-				'watchandlearn/lvlup.html',
-				context={},
-			)
+    profile = request.user.profile
+    return render(
+        request,
+        'watchandlearn/lvlup.html',
+        context={'profile': profile},
+      )
 
 @login_required
 def feedback(request, pk):
