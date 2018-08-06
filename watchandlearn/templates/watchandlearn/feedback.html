@@ -22,9 +22,10 @@
               <div class="row">
                 <div class="col-sm-10">
                     {% if answers.forloop.counter %}
-                        <p id="correct">Correct!</p>
+                        <span id="correct">Correct!</span>
                     {% else %}
-                        <p id="incorrect">Incorrect.</p> The correct answer is {{ question.answer }}
+                        <span id="incorrect">Incorrect.</span> The correct answer is {{ question.answer }} <br>
+                        Your choice: {{ answers.forloop.counter }}
                     {% endif %}
                   <div class="question-choice">
                     <input type="radio" name="question{{ forloop.counter }}" value="1"> {{ question.option1 }} </input>
