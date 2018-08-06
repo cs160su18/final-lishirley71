@@ -75,7 +75,12 @@
                       }
                       
                       $("#popup").click(function(){
-                          $("#tip").css("opacity",".8");
+                        $("#tip").css("opacity",".8");
+                      })
+                      
+                      $("#tip").click(function(){
+                        $("#tip").css("opacity","0");
+                        $("#popup").css("opacity", "0");
                       })
                   }
                 }
