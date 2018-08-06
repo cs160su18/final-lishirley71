@@ -32,7 +32,6 @@
                 color: white;
                 opacity: 0;
                 padding-left: 3em;
-
             }
             #tip span{
                 opacity: 1;
@@ -50,7 +49,6 @@
             tag.src="https://www.youtube.com/iframe_api";
             var firstScriptTag = document.getElementsByTagName('script')[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
             var player;
             function onYouTubeIframeAPIReady() {
                 player = new YT.Player('vid', {
@@ -58,38 +56,30 @@
                     'onReady': onPlayerReady
                   }
                 });
-
             }
-
             function onPlayerReady(event){
                 event.target.playVideo();
                 var popUpStatus = false;
                 function updateTime() {
                   var videotime = 0;
-
                   if(player && player.getCurrentTime) {
                     videotime = player.getCurrentTime();
-
                     console.log("time: "+Math.round(videotime));
-
                       if(Math.round(videotime)==206){
                           popUpStatus = true;
                           $("#popup").css("opacity","1");
                           checkPopUp();
                       }
+                  }
                 }
-              }
               timeupdater = setInterval(updateTime, 100);
-
               $("#popup").click(function(){
                 $("#tip").css("opacity",".8");
               })
-
               $("#tip").click(function(){
                 $("#tip").css("opacity","0");
                 $("#popup").css("opacity", "0");
               })
-
               function checkPopUp() {
                 if (popUpStatus) {
                   clearInterval(timeupdater);
@@ -100,9 +90,6 @@
                 }
               }
             }
-
-
-
         </script>
     </body>
 
