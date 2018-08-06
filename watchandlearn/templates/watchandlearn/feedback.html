@@ -108,6 +108,8 @@ body, html{
   window.onload = function() {
       var newavi = document.getElementById("newavi");
       newavi.innerHTML += "<div class='row justify-content-center align-text-center'><img src='{% static 'watchandlearn/images/avatars/lvl{{ profile.level }}.png' %}'' id='avatar'></div>";
+  
+      console.log({{ answers }});
   }
 </script>
 
