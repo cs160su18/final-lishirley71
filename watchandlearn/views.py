@@ -25,6 +25,14 @@ def index(request):
 
 @login_required
 def assessment(request):
+  return render(
+      request,
+      'watchandlearn/assessment.html',
+      context={},
+  )
+
+@login_required
+def recommended(request):
   if request.method == 'POST':
       profile = request.user.profile
       voVal = int(request.POST.get('vocabulary'))
@@ -39,15 +47,6 @@ def assessment(request):
       profile.grammar = grVal
       profile.composite = voVal + reVal + wrVal + grVal
       #Need to calculate level and experience
-
-  return render(
-      request,
-      'watchandlearn/assessment.html',
-      context={},
-  )
-
-@login_required
-def recommended(request):
   series_by_topic = []
   topics = Topic.objects.all()
   for topic in topics:
