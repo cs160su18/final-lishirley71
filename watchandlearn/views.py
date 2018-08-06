@@ -40,8 +40,6 @@ def recommended(request):
       reVal = int(request.POST.get('reading'))
       wrVal = int(request.POST.get('writing'))
       grVal = int(request.POST.get('grammar'))
-      print('Does this work')
-      print(voVal)
       profile.vocabulary = voVal
       profile.reading = reVal
       profile.writing = wrVal
@@ -49,7 +47,6 @@ def recommended(request):
       profile.composite = voVal + reVal + wrVal + grVal
       profile.level = math.floor(profile.composite/40)
       profile.experience = 0
-      #Need to calculate level and experience
   series_by_topic = []
   topics = Topic.objects.all()
   for topic in topics:
