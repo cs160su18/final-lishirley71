@@ -12,7 +12,7 @@
         overflow-y: auto; 
       }
     </style>
-    
+
     <div class = "container panel-side">
       <br>
       <ul class="pagination" style="position: fixed; bottom: 0">
@@ -32,21 +32,14 @@
               <li data-target="#carousel{{ forloop.counter }}" data-slide-to="1"></li>
               <li data-target="#carousel{{ forloop.counter }}" data-slide-to="2"></li>
             </ol>
-              
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner text-center">
-              <div class="item active" style="padding-left: 25%">
-                <img src="https://i.pinimg.com/originals/67/bc/36/67bc36fe4a5ad62a59b03059b58f57a1.jpg" alt="Pokemon" style="width:50%;">
+            {% for s in series %}
+              <div class="carousel-inner text-center">
+                <div class="item active" style="padding-left: 25%">
+                  <img src="{{ s.image }}" alt="{{ s.title }}" style="width:50%;">
+                </div>
               </div>
-
-              <div class="item" style="padding-left: 25%">
-                <img src="https://media.nyusu.fm/ranking/option/940/11055.jpg" alt="K-ON" style="width:50%;">
-              </div>
-
-              <div class="item" style="padding-left: 25%">
-                <img src="https://img.etsystatic.com/il/d4bdc1/1266183999/il_570xN.1266183999_dz6q.jpg?version=0" alt="Naruto" style="width:50%;">
-              </div>
-            </div>
+            {% endfor %}
+           
 
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#carousel{{ forloop.counter }}" data-slide="prev">

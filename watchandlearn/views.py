@@ -23,31 +23,33 @@ def index(request):
         context={},
     ) 
 
-# @login_required
+@login_required
 def assessment(request):
-    return render(
-        request,
-        'watchandlearn/assessment.html',
-        context={},
-    ) 
+  return render(
+      request,
+      'watchandlearn/assessment.html',
+      context={},
+  ) 
 
-# @login_required
+@login_required
 def recommended(request):
-    series = Series.objects.all()
-    topics = Topic.objects.all()
-    return render(
-        request, 
-        "watchandlearn/recommended.html", 
-        context={'series':series, 'topics': topics}
-    )
+  topics = Topic.objects.all()
+  series = {}
+  for topic in topics:
+    series[topic.id] = Series.objects.filter(topic=topic)
+  return render(
+      request, 
+      "watchandlearn/recommended.html", 
+      context={'series':series, 'topics': topics}
+  )
 
-# @login_required
+@login_required
 def episodes(request, pk):
   series = get_object_or_404(Series, pk=pk)
   episodes = Episode.objects.all().filter(series__pk=pk)
   return render(request, 'watchandlearn/episodes.html', context={'series': series, "episodes": episodes},)
 
-# @login_required
+@login_required
 def quiz(request, pk):
   quiz = get_object_or_404(Quiz, pk=pk)
   questions = Question.objects.all().filter(quiz__pk=pk)
@@ -60,8 +62,8 @@ def episode_watch(request, pk):
     return render(request, 'watchandlearn/episode_watch.html', context={'episode': episode})
 
 
-# @login_required
-class EpisodeDetailView(generic.DetailView):
+
+class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
   model = Episode
 
   # HELPER METHODS
@@ -181,7 +183,7 @@ class EpisodeDetailView(generic.DetailView):
     context['terms'] = terms
     return context
     
-# @login_required
+@login_required
 def lvlup(request):
 	return render(
 				request,
@@ -189,7 +191,7 @@ def lvlup(request):
 				context={},
 			)
 
-# @login_required
+@login_required
 def feedback(request, pk):
   if request.method == 'POST':
     quiz = get_object_or_404(Quiz, pk=pk)
