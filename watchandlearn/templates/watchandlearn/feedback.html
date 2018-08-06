@@ -62,7 +62,7 @@ body, html{
                             <span id="correct">Correct!</span>
                         {% else %}
                             <span id="incorrect">Incorrect.</span> The correct answer is {{ question.answer }} <br>
-                            Your choice: {{ answers.forloop.counter }}
+                            Your choice: {{ answers.forloop.counter|add:"-1" }}
                         {% endif %}
                       <div class="question-choice">
                         <input type="radio" name="question{{ forloop.counter }}" value="0"> {{ question.option1 }} </input>
