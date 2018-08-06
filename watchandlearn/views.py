@@ -96,10 +96,7 @@ def episode_watch(request, pk):
       timestamp = term.get('timestamp')
       word = term.get('word')
       definition = term.get('definition')
-      time = get_seconds(timestamp)
-      print(timestamp," : ", time)
-
-
+      term["timestamp"] = get_seconds(timestamp)
 
 
     return render(request, 'watchandlearn/episode_watch.html', context={'episode': episode, 'terms': terms})
