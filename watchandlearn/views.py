@@ -233,10 +233,12 @@ def feedback(request, pk):
     quiz = get_object_or_404(Quiz, pk=pk)
     questions = list(Question.objects.all().filter(quiz__pk=pk))
     answers = []
+    submissions = []
     xp = 0
     print(request.POST)
     for i in range(len(questions)):
       submitted_answer = request.POST.get('question' + str(i+1))
+      submissions.append(submitted_answer)
       question = questions[i]
       print(submitted_answer)
       print(question.answer)
@@ -245,4 +247,4 @@ def feedback(request, pk):
         xp += question.experience
     request.user.profile.experience += xp
     print(answers)
-  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers})
+  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers, "submissions":submissions})
