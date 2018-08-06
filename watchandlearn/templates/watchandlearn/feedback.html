@@ -21,6 +21,11 @@
               </legend>
               <div class="row">
                 <div class="col-sm-10">
+                    {% if answer.{{forloop.counter}} %}
+                        Correct!
+                    {% else %}
+                        Incorrect. The correct answer is
+                    {% endif %}
                   <div class="question-choice">
                     <input type="radio" name="question{{ forloop.counter }}" value="1"> {{ question.option1 }} </input>
                   </div>
@@ -36,7 +41,7 @@
                 </div>
               </div>
             </fieldset>
-           
+            {% endfor %}
           {% endfor %}
         </div>
       </div>  
