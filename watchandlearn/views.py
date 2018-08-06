@@ -199,10 +199,9 @@ def feedback(request, pk):
     quiz = get_object_or_404(Quiz, pk=pk)
     questions = list(Question.objects.all().filter(quiz__pk=pk))
     answers = []
-    i=1
+    print(request.POST)
     for i in range(len(questions)):
-      submitted_answer = request.POST.get('question' + str(i))
-      print(submitted_answer)
+      submitted_answer = request.POST.get('question' + str(i+1))
       question = questions[i]
       answers.append(str(question.answer) == submitted_answer)
     print(answers)

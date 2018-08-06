@@ -43,3 +43,9 @@
 	  grammarOutput.innerHTML = grammarScore;
 	  score = score + grammarScore;
 	}
+
+	console.log(vocabScore);
+	console.log(readingScore);
+	console.log(writingScore);
+	console.log(grammarScore);
+	
