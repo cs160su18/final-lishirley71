@@ -61,7 +61,7 @@ def episode_watch(request, pk):
 
 
 # @login_required
-class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
+class EpisodeDetailView(generic.DetailView):
   model = Episode
 
   # HELPER METHODS
