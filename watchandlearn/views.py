@@ -40,7 +40,7 @@ def recommended(request):
       reVal = int(request.POST.get('reading'))
       wrVal = int(request.POST.get('writing'))
       grVal = int(request.POST.get('grammar'))
-      profile.vocabulary = voVal
+      profile.vocabulary = round((voVal/100)*6)
       profile.reading = reVal
       profile.writing = wrVal
       profile.grammar = grVal
@@ -191,7 +191,7 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
     # compare words to user's vocab score
     u = self.request.user.profile
     vocab = u.vocabulary
-
+    print(vocab)
     # create list of unique words
     script_list = self.strip_captions(episode.subtitle)
     for diff_lvl in reversed(self.irange(vocab, HIGHEST_SCORE)):
