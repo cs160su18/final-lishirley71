@@ -195,6 +195,12 @@ html, body{
   min-width: 30vw;
 }
 
+#pop{
+    color: orange;
+    background-color: white;
+    border-color: orange;
+}
+
 /*quiz*/
 
 .btns{
