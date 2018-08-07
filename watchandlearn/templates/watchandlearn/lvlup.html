@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load my_tags %}
 
 <html>
 <head>
@@ -73,7 +74,7 @@
 <script type="text/javascript">
     window.onload = function() {
       var newavi = document.getElementById("newavi");
-      newavi.innerHTML += "<div class='row justify-content-center align-text-center'><img src='imgs.{{ profile.level }}' id='avatar'></div>";
+      newavi.innerHTML += "<div class='row justify-content-center align-text-center'><img src='{{ imgs|get_by_index:profile.level }}' id='avatar'></div>";
 
       var lvltext = document.getElementById("lvltext");
       lvltext.innerHTML += "<h1 class='text-center'> LEVEL<br>{{ profile.level }}</h1>";
