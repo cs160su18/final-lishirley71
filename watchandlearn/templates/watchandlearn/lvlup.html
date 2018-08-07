@@ -47,9 +47,9 @@
         <div class="col-sm-1"><p>XP</p></div>
         <div class="col-sm-8">
           <div class="progress">
-          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30"
-          aria-valuemin="0" aria-valuemax="100"  style="width:100%">
-            <span>100% Complete</span>
+          <div id="dynamic" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
+          aria-valuemin="0" aria-valuemax="100"  style="width:0%">
+            <span id="current-progress"></span>
           </div>
           </div>
         </div>
@@ -78,7 +78,17 @@
 
       var lvltext = document.getElementById("lvltext");
       lvltext.innerHTML += "<h1 class='text-center'> LEVEL<br>{{ profile.level }}</h1>";
+
+
+      var current_progress = Math.floor( {{ profile.level }} % 1000 / 10);
+    
+
+      $("#dynamic")
+      .css("width", current_progress + "%")
+      .attr("aria-valuenow", current_progress)
+      .text(current_progress + "% Complete");
     }
+    
 
 
 </script>
