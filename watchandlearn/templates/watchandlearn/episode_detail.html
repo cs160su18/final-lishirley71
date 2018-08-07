@@ -21,7 +21,7 @@
           <!-- django -->
         <ul id="termList">
           {% for term in terms %}
-            <li>{{ term.timestamp }} {{ term.word }}: {{ term.definition }}</li>
+            <li><h2>{{ term.timestamp }} {{ term.word }}: {{ term.definition }}</h2></li>
           {% endfor %}
         </ul>
 
