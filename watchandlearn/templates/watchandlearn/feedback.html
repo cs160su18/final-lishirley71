@@ -34,6 +34,11 @@ body, html{
   position: fixed;
 }
 
+#avatar {
+      height: 50%;
+      width: 50%;
+    }
+
 </style>
 
 
@@ -89,6 +94,7 @@ body, html{
 
       <div class = "right half">
         <div class="col justify-contents-center align-self-center" id="newavi"></div>
+        <br>
         <div class="row justify-content-center align-text-center">
           <div class="col-sm-1"><p>XP</p></div>
           <div class="col-sm-8">
@@ -107,7 +113,7 @@ body, html{
 <script type="text/javascript">
   window.onload = function() {
       var newavi = document.getElementById("newavi");
-      newavi.innerHTML += "<div class='row justify-content-center align-text-center'><img src='{% static 'watchandlearn/images/avatars/lvl{{ profile.level }}.png' %}'' id='avatar'></div>";
+      newavi.innerHTML += "<div class='row justify-content-center align-text-center'><img src='{{ imgs|get_by_index:profile.level }}' id='avatar'></div>";
   
       console.log({{ answers }});
   }

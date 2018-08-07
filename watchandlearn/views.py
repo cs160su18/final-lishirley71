@@ -235,6 +235,12 @@ def lvlup(request):
 
 @login_required
 def feedback(request, pk):
+  imgs = ["https://i.imgur.com/e8C02kF.png", "https://i.imgur.com/GoN6UEA.png", "https://i.imgur.com/IGepXLH.png",
+    "https://i.imgur.com/7lOka50.png", "https://i.imgur.com/I2GwTfk.png", "https://i.imgur.com/O3j5lQ8.png",
+    "https://i.imgur.com/4InrBmC.png", "https://i.imgur.com/87ZzC47.png", "https://i.imgur.com/pIBZwEF.png",
+    "https://i.imgur.com/GPHtSUW.png"]
+  profile = request.user.profile
+
   if request.method == 'POST':
     quiz = get_object_or_404(Quiz, pk=pk)
     questions = list(Question.objects.all().filter(quiz__pk=pk))
@@ -253,4 +259,4 @@ def feedback(request, pk):
         xp += question.experience
     request.user.profile.experience += xp
     print(answers)
-  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers, "submissions":submissions})
+  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers, "submissions":submissions, 'imgs': imgs, 'profile': profile})
