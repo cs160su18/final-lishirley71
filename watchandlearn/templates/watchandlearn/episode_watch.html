@@ -41,7 +41,6 @@
         <iframe id="vid" enablejsapi="1" src="{{ episode.video }}?enablejsapi=1" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
 
         {% for term in terms %}
-          <span class="popup" id="popup{{ forloop.counter }}">!</span>
           <div class="tip" id="tip{{ forloop.counter }}"><span>{{ term.word }}: {{ term.definition }}</span></div>
         {% endfor %}
         
@@ -70,7 +69,7 @@
                       {% for term in terms %}
                         if(Math.round(videotime) == {{ term.timestamp }}){
                           popUpStatus = true;
-                          $("#popup{{ forloop.counter }}").css("opacity","1");
+                          $("#tip{{ forloop.counter }}").css("opacity","1");
                           checkPopUp();
                         }
                       {% endfor %}
@@ -81,12 +80,10 @@
                 }
               timeupdater = setInterval(updateTime, 100);
               {% for term in terms %}
-                $("#popup{{ forloop.counter }}").click(function(){
-                  $("#tip{{ forloop.counter }}").css("opacity",".8");
-                })
+               
                 $("#tip{{ forloop.counter }}").click(function(){
                   $("#tip{{ forloop.counter }}").css("opacity","0");
-                  $("#popup{{ forloop.counter }}").css("opacity", "0");
+                  
                 })      
               {% endfor %}
               
@@ -96,7 +93,7 @@
                   setTimeout(function(){
                     {% for term in terms %}
                       $("#tip{{ forloop.counter }}").css("opacity","0");
-                      $("#popup{{ forloop.counter }}").css("opacity", "0");
+                     
                     {% endfor %}
                   }, 5000);
                 }
