@@ -246,6 +246,8 @@ def feedback(request, pk):
     questions = list(Question.objects.all().filter(quiz__pk=pk))
     answers = []
     submissions = []
+    qop = []
+    curr = []
     xp = 0
     print(request.POST)
     for i in range(len(questions)):
@@ -257,6 +259,9 @@ def feedback(request, pk):
       answers.append(str(question.answer-1) == submitted_answer)
       if (str(question.answer-1) == submitted_answer):
         xp += question.experience
+      curr = [question.option1, question.option2, question.option3]
+      print(str(i) + " this is the current question list: " + str(curr))
+      qop.append(curr)
     request.user.profile.experience += xp
-    print(answers)
-  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers, "submissions":submissions, 'imgs': imgs, 'profile': profile})
+    print("this is the overall list of lists: " + str(qop))
+  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers, "submissions":submissions, 'imgs': imgs, 'profile': profile, 'options': qop})
