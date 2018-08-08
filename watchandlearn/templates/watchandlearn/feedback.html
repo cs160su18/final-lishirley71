@@ -64,10 +64,9 @@ body, html{
                   <div class="row">
                     <div class="col-sm-10">
                         {% if answers|get_by_index:forloop.counter %}
-                            <span id="correct">Correct!</span>
+                            <span id="correct">{{ answer_text|get_by_index:forloop.counter }}</span>
                         {% else %}
-                            <span id="incorrect">Incorrect.</span> The correct answer is {{ question.answer|add:"-1" }} <br>
-                            Your choice: {{ submissions|get_by_index:forloop.counter }}
+                            <span id="incorrect">{{ answer_text|get_by_index:forloop.counter }}</span>
                         {% endif %}
                       <div class="question-choice">
                         <input type="radio" name="question{{ forloop.counter }}" value="0"> {{ question.option1 }} </input>
@@ -114,13 +113,15 @@ body, html{
       var newavi = document.getElementById("newavi");
       newavi.innerHTML += "<div class='row justify-content-center align-text-center'><img src='{{ imgs|get_by_index:profile.level }}' id='avatar'></div>";
 
-      var current_progress = Math.floor( {{ profile.level }} % 1000 / 10);
+      var current_progress = Math.floor( {{ profile.experience }} % 1000 / 10);
+      // var current_progress = {{ profile.experience }};
     
 
-      $("#dynamic")
-      .css("width", current_progress + "%")
-      .attr("aria-valuenow", current_progress)
-      .text(current_progress + "% Complete");
+      var dy = document.getElementById("dynamic");
+      dy.style.width = (current_progress + "%");
+
+      dy.setAttribute("aria-valuenow", current_progress);
+      dy.innerHTML = (current_progress + "% Complete");
   
   }
 </script>

@@ -235,16 +235,17 @@ def lvlup(request):
 
 @login_required
 def feedback(request, pk):
-  imgs = ["https://i.imgur.com/e8C02kF.png", "https://i.imgur.com/GoN6UEA.png", "https://i.imgur.com/IGepXLH.png",
-    "https://i.imgur.com/7lOka50.png", "https://i.imgur.com/I2GwTfk.png", "https://i.imgur.com/O3j5lQ8.png",
-    "https://i.imgur.com/4InrBmC.png", "https://i.imgur.com/87ZzC47.png", "https://i.imgur.com/pIBZwEF.png",
-    "https://i.imgur.com/GPHtSUW.png"]
+  imgs = ["http://i.imgur.com/e8C02kF.png", "http://i.imgur.com/GoN6UEA.png", "http://i.imgur.com/IGepXLH.png",
+    "http://i.imgur.com/7lOka50.png", "http://i.imgur.com/I2GwTfk.png", "http://i.imgur.com/O3j5lQ8.png",
+    "http://i.imgur.com/4InrBmC.png", "http://i.imgur.com/87ZzC47.png", "http://i.imgur.com/pIBZwEF.png",
+    "http://i.imgur.com/GPHtSUW.png"]
   profile = request.user.profile
 
   if request.method == 'POST':
     quiz = get_object_or_404(Quiz, pk=pk)
     questions = list(Question.objects.all().filter(quiz__pk=pk))
     answers = []
+    answer_text = []
     submissions = []
     qop = []
     curr = []
@@ -254,14 +255,23 @@ def feedback(request, pk):
       submitted_answer = request.POST.get('question' + str(i+1))
       submissions.append(submitted_answer)
       question = questions[i]
-      print(submitted_answer)
-      print(question.answer)
       answers.append(str(question.answer-1) == submitted_answer)
+      if (str(question.answer-1) == submitted_answer):
+        answer_text.append("Correct.")
+      else:
+        print(question.answer)
+        if question.answer == 0:
+          answer_text.append('Sorry the answer was "' + question.option1 + '".')
+        elif question.answer == 1:
+          answer_text.append('Sorry the answer was "' + question.option2 + '".')
+        elif question.answer == 2:
+          answer_text.append('Sorry the answer was "' + question.option3 + '".')
       if (str(question.answer-1) == submitted_answer):
         xp += question.experience
       curr = [question.option1, question.option2, question.option3]
+
       print(str(i) + " this is the current question list: " + str(curr))
       qop.append(curr)
     request.user.profile.experience += xp
     print("this is the overall list of lists: " + str(qop))
-  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers, "submissions":submissions, 'imgs': imgs, 'profile': profile, 'options': qop})
+  return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers, "submissions":submissions, 'imgs': imgs, 'profile': profile, 'options': qop, 'answer_text': answer_text})
