@@ -222,10 +222,10 @@ class EpisodeDetailView(LoginRequiredMixin, generic.DetailView):
 def lvlup(request):
     profile = request.user.profile
 
-    imgs = ["https://i.imgur.com/e8C02kF.png", "https://i.imgur.com/GoN6UEA.png", "https://i.imgur.com/IGepXLH.png",
-    "https://i.imgur.com/7lOka50.png", "https://i.imgur.com/I2GwTfk.png", "https://i.imgur.com/O3j5lQ8.png",
-    "https://i.imgur.com/4InrBmC.png", "https://i.imgur.com/87ZzC47.png", "https://i.imgur.com/pIBZwEF.png",
-    "https://i.imgur.com/GPHtSUW.png"]
+    imgs = ["http://i.imgur.com/e8C02kF.png", "http://i.imgur.com/GoN6UEA.png", "http://i.imgur.com/IGepXLH.png",
+    "http://i.imgur.com/7lOka50.png", "http://i.imgur.com/I2GwTfk.png", "http://i.imgur.com/O3j5lQ8.png",
+    "http://i.imgur.com/4InrBmC.png", "http://i.imgur.com/87ZzC47.png", "http://i.imgur.com/pIBZwEF.png",
+    "http://i.imgur.com/GPHtSUW.png"]
 
     return render(
         request,
