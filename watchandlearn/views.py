@@ -227,6 +227,10 @@ def lvlup(request):
     "http://i.imgur.com/4InrBmC.png", "http://i.imgur.com/87ZzC47.png", "http://i.imgur.com/pIBZwEF.png",
     "http://i.imgur.com/GPHtSUW.png"]
 
+    profile.level += math.floor(profile.experience/1000)
+    profile.experience = profile.experience % 1000
+    profile.save()
+
     return render(
         request,
         'watchandlearn/lvlup.html',
@@ -272,6 +276,7 @@ def feedback(request, pk):
 
       print(str(i) + " this is the current question list: " + str(curr))
       qop.append(curr)
-    request.user.profile.experience += xp
+    profile.experience += xp
+    profile.save()
     print("this is the overall list of lists: " + str(qop))
   return render(request, 'watchandlearn/feedback.html', context={'questions': questions, 'answers': answers, "submissions":submissions, 'imgs': imgs, 'profile': profile, 'options': qop, 'answer_text': answer_text})
